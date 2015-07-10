@@ -127,3 +127,7 @@ sympy-plots-for-*.tex/
 
 # csv
 *.csv#
+
+
+# Response directory
+Response/*
