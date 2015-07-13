@@ -5,11 +5,11 @@ A retenir,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,Title,doi,Type,Categorie,Paper informations,Mail,Final informations,Code source,Script,Share,Comment,Link
-Hotnets-2014,Internet at the speed of light,10.1145/2670518.2673876,Paper,Measurement,Partial,Send,,,,,,
+Hotnets-2014,Internet at the speed of light,10.1145/2670518.2673876,Paper,Measurement,Partial,Response,,,,.tgz by mail,,
 ,An information-theoretic approach to routing scalability,10.1145/2670518.2673863,Paper,Theoretical/Analysis,Partial,Send,,,,,,
 ,Sweet Little Lies: Fake Topologies for Flexible Routing,10.1145/2670518.2673868,Paper,Presentation/Analysis,Partial,Wait,,,,,,
 ,A Call to arms for management planne analytics,10.1145/2670518.2673883,Paper,Analysis,Partial,Response,Complet,Public,Public,.tgz by mail,Really nice repository with a complete README and clear instruction,
-,Intentional Network Monitoring: Finding the Needle without Capturing the Haystack,10.1145/2670518.2673872,Paper,Pratical,Partial,Response,Complet,Public,No need,Github,Nice repertory with Makefile which seems take in all usefull action,https://github.com/sdonovan1985/netassay-proto
+,Intentional Network Monitoring: Finding the Needle without Capturing the Haystack,10.1145/2670518.2673872,Paper,Pratical,Partial,Response,Complet,Public,No need,Github,Nice repository with Makefile which seems take in all usefull action,https://github.com/sdonovan1985/netassay-proto
 ,,,,,,,,,,,,https://github.com/sdonovan1985/netassay 
 ,PRAN: Programmable Radio Access Networks,10.1145/2670518.2673865,Paper,Implementation,Partial,Send,,,,,,
 ,Reclaiming the Brain: Useful OpenFlow Functions in the Data Plane,10.1145/2670518.2673874,Paper,Theoretical,Self contains,,,,,,,
@@ -24,14 +24,14 @@ Hotnets-2014,Internet at the speed of light,10.1145/2670518.2673876,Paper,Measur
 ,DNS Resolvers Considered Harmful,10.1145/2670518.2673881,Paper,Seurity/Design,Self contains,,,,,,,
 ,Crowdsourcing Access Network Spectrum Allocation Using Smartphones,10.1145/2670518.2673866,Paper,,Partial,Response,Complet,Public,Private,Github and webplatform,We can add our experiment and get the result on webplatform,https://github.com/blue-systems-group/ 
 ,,,,,,,,,,,,https://phone-lab.org/experiment/request/ 
-,PEERING: An AS for Us,10.1145/2670518.2673887,Paper,,Partial,Response,???,No access,No access,webplatform,Acces to a platform,http://peering.usc.edu  
+,PEERING: An AS for Us,10.1145/2670518.2673887,Paper,,Partial,Response,???,No available,No available,webplatform,Acces to a platform,http://peering.usc.edu  
 ,Infrastructure Mobility: A What-if Analysis,10.1145/2670518.2673862,Paper,,Partial,Response,,,,,Fuller paper in submission,
 ,NetEgg: Programming Network Policies by Examples,10.1145/2670518.2673879,Paper,Implementation,Partial,Response,Complet,Private,Private,.tgz by mail,Privacy but give a tar,
 ,A Highly Available Software Defined Fabric,10.1145/2670518.2673884,Paper,Theoretical,Self contains,,,,,,,
 ,Tolerating SDN Application Failures with LegoSDN,10.1145/2670518.2673880,Paper,,Partial,Send,,,,,,
 ,InFrame: Multiflexing Full-Frame Visible Communication Channel for Humans and Devices,10.1145/2670518.2673867,Paper,Theoretical/implementation,Partial,Send,,,,,,
 ,Revisiting Resource Pooling: The Case for In-Network Resource Sharing,10.1145/2670518.2673875,Paper,Theoretical,Self contains,,,,,,,
-,PIAS: Practical Information-Agnostic Flow Scheduling for Data Center Networks,10.1145/2670518.2673871,Paper,Design,Partial,Response,No plot,Public,No access,Github,Seems good to use PIAS but not to reproduce the paper,https://github.com/baiwei0427/PIAS 
+,PIAS: Practical Information-Agnostic Flow Scheduling for Data Center Networks,10.1145/2670518.2673871,Paper,Design,Partial,Response,No plot,Public,No available,Github,Seems good to use PIAS but not to reproduce the paper,https://github.com/baiwei0427/PIAS 
 ,Theia: Simple and Cheap Networking for Ultra-Dense Data Centers,10.1145/2670518.2673885,Paper,Theoretical,Self contains,,,,,,,
 ,,,,,,,,,,,,
 Hotnets-2013,Corybantic: towards the modular composition of SDN control programs,10.1145/2535771.2535795,Paper,Theoretical,Partial,Response,Irreproductible,Private,Private,,No open source,
@@ -58,7 +58,7 @@ Hotnets-2013,Corybantic: towards the modular composition of SDN control programs
 ,,,,,,,,,,,, http://web.mit.edu/anirudh/www/sdn-data-plane.html
 ,On consistent updates in software defined networks,10.1145/2535771.2535791,Paper,Algorithm,Partial,Response,Complet,Public,Public,Github,,https://github.com/ratulm/consistency/tree/master/data
 ,Towards minimal-delay deadline-driven data center TCP,10.1145/2535771.2535788,Paper,Mathematical,Partial,Response,Complet,Public,Public,Github,,https://github.com/baiwei0427/PIAS/tree/master/mixedflow/
-,Trevi: watering down storage hotspots with cool fountain codes,10.1145/2535771.2535781,Paper,Design,Partial,Response,Irreproductible,No access,No access,,Too early in order to make reproducibility ,https://www.usenix.org/system/files/conference/nsdi15/nsdi15-paper-grosvenor_update.pdf
+,Trevi: watering down storage hotspots with cool fountain codes,10.1145/2535771.2535781,Paper,Design,Partial,Response,Irreproductible,No available,No available,,Too early in order to make reproducibility ,https://www.usenix.org/system/files/conference/nsdi15/nsdi15-paper-grosvenor_update.pdf
 ,,,,,,,,,,,,http://www.cl.cam.ac.uk/research/srg/netos/qjump/ 
 ,Patch panels in the sky: a case for free-space optics in data centers,10.1145/2535771.2535797,Paper,Design,Self contains,,,,,,,
 ,Managing the network with Merlin,10.1145/2535771.2535792,Paper,,,???,,,,,Where is Merlin ?,
@@ -100,22 +100,25 @@ SIGCOMM-2014,Millions of little minions: using packets for low latency network p
 ,Demonstrating the prospects of dynamic application-aware networking in a home environment,10.1145/2619239.2631450,Poster,Implementation,Partial,Send,,,,,,
 ,A Middlebox-Cooperative TCP for a non End-to-End Internet,,Paper,Implementation,Complet,,Complet,Public,Public,Website,,http://www.cmand.org/hiccups/
 ,OpenNF: enabling innovation in network function control,10.1145/2619239.2626313,Paper,Design/Implementation,Complet,,,,,,,http://opennf.cs.wisc.edu/
-,Network stack specialization for performance,10.1145/2619239.2626311,Paper,Measurement,Partial,Response,,,,,No public release but can send only for me the source code,
+,Network stack specialization for performance,10.1145/2619239.2626311,Paper,Measurement,Partial,Response,,Private but can share,,,No public release but can send only for me the source code,
 ,A buffer-based approach to rate adaptation: evidence from a large video streaming service,10.1145/2619239.2626296,Paper,Implementation,Partial,Send,,,,,,
 ,FastForward: fast and constructive full duplex relays,10.1145/2619239.2626327,Paper,Implementation,Partial,Send,,,,,,
 ,LTE radio analytics made easy and accessible,10.1145/2619239.2626320,Paper,Measurement,Partial,Send,,,,,,
 ,Control-plane protocol interactions in cellular networks,10.1145/2619239.2626302,Paper,,Partial,Send,,,,,,
 ,RF-IDraw: virtual touch screen in the air using RF signals,10.1145/2619239.2626330,Paper,Implementation,Partial,Send,,,,,,
 ,Diagnosing missing events in distributed systems with negative provenance,10.1145/2619239.2626335,Paper,Design,Partial,Send,,,,,,
-,Troubleshooting blackbox SDN control software with minimal causal sequences,10.1145/2619239.2626304,Paper,Implementation,Partial,Response,,,,,,"https://github.com/ucb-sts/sts, http://ucb-sts.github.io/experiments/"
+,Troubleshooting blackbox SDN control software with minimal causal sequences,10.1145/2619239.2626304,Paper,Implementation,Partial,Response,Complet,Public,Public,Github/Website,"Good repository, explain on dependency and nice wwebsite to reproduce experiment",https://github.com/ucb-sts/sts
+,,,,,,,,,,,,http://ucb-sts.github.io/experiments/
 ,Planck: millisecond-scale monitoring and control for commodity networks,10.1145/2619239.2626310,Paper,Design,Partial,Send,,,,,,
-,DREAM: dynamic resource allocation for software-defined measurement,10.1145/2619239.2626291,Paper,Measurement,Partial,Response,,,,,,"https://github.com/USC-NSL/DREAM, https://docs.google.com/document/d/16p2uB_37bZjSvxVjcYpidFw0iRtyNITkvgGkGHPGNCY/edit#heading=h.osb53vqbxb1n "
+,DREAM: dynamic resource allocation for software-defined measurement,10.1145/2619239.2626291,Paper,Measurement,Partial,Response,Complet,Public,Public,Github/Website,Good repository and nice google doc to reproduce experiment,https://github.com/USC-NSL/DREAM
+,,,,,,,,,,,,https://docs.google.com/document/d/16p2uB_37bZjSvxVjcYpidFw0iRtyNITkvgGkGHPGNCY/edit#heading=h.osb53vqbxb1n 
 ,Quartz: a new design element for low-latency DCNs,10.1145/2619239.2626332,Paper,,Partial,Send,,,,,,
-,Using RDMA efficiently for key-value services,10.1145/2619239.2626299,Paper,Design,Partial,Response,,,,,,"https://github.com/efficient/HERD, apt.emulab.net"
+,Using RDMA efficiently for key-value services,10.1145/2619239.2626299,Paper,Design,Partial,Response,Complet,Public,Public,Github,,https://github.com/efficient/HERD
+,,,,,,,,,,,,apt.emulab.net
 ,"Fastpass: a centralized ""zero-queue"" datacenter network",10.1145/2619239.2626309,Paper,Implementation,Complet,,,,,,,http://fastpass.mit.edu/
 ,FireFly: a reconfigurable wireless data center fabric using free-space optics,10.1145/2619239.2626328,Paper,,Partial,Send,,,,,,
 ,"A ""hitchhiker's"" guide to fast and efficient data reconstruction in erasure-coded data centers",10.1145/2619239.2626325,Paper,Design,Partial,Send,,,,,,
-,Enabling near real-time central control for live video delivery in CDNs,10.1145/2619239.2631444,Poster,Design,Partial,Response,,,,,Privacy implementation/data,
+,Enabling near real-time central control for live video delivery in CDNs,10.1145/2619239.2631444,Poster,Design,Partial,Response,Irreproductible,Private,Private,,,
 ,NetAssay: providing new monitoring primitives for network operators,10.1145/2619239.2631451,Poster,Design,Self contains,,,,,,,
 ,OpenSAN: a software-defined satellite network architecture,10.1145/2619239.2631454,Poster,Design,Self contains,,,,,,,
 ,SENSS: observe and control your own traffic in the internet,10.1145/2619239.2631459,Poster,Design,Partial,Send,,,,,,
@@ -126,33 +129,39 @@ SIGCOMM-2014,Millions of little minions: using packets for low latency network p
 ,Demonstrating the optimal placement of virtualized cellular network functions in case of large crowd events,10.1145/2619239.2631428,Poster,Design,Self contains,,,,,,,
 ,Tracing multipath TCP connections,10.1145/2619239.2631453,Poster,Measurement,Complet,,,,,,,
 ,Demo: a virtualized lab testbed with physical network outlets for hands-on computer networking education,10.1145/2619239.2631429,Poster,Lab,Complet,,,,,,,
-,Rethinking congestion control architecture: performance-oriented congestion control,10.1145/2619239.2631456,Poster,Measurement,Partial,Response,,,,,No test,"https://github.com/modong/pcc, http://speedier.net/pcc/"
+,Rethinking congestion control architecture: performance-oriented congestion control,10.1145/2619239.2631456,Poster,Measurement,Partial,Response,Partial,Public,Private,Github,,https://github.com/modong/pcc
+,,,,,,,,,,,,http://speedier.net/pcc/
 ,DOT: distributed OpenFlow testbed,10.1145/2619239.2631457,Poster,Implementation,Complet,,,,,,,
-,Evaluating the effect of centralization on routing convergence on a hybrid BGP-SDN emulation framework,10.1145/2619239.2631458,Poster,Implementation,Partial,Response,,,,,,https://bitbucket.org/gaadrian/siren/downloads
-,Droid-Sec: deep learning in android malware detection,10.1145/2619239.2631434,Poster,Design,Complet,,,,,,,https://code.google.com/p/droidbox/
+,Evaluating the effect of centralization on routing convergence on a hybrid BGP-SDN emulation framework,10.1145/2619239.2631458,Poster,Implementation,Partial,Response,Complet,Public,Public,Bitbucket,,https://bitbucket.org/gaadrian/siren/downloads
+,Droid-Sec: deep learning in android malware detection,10.1145/2619239.2631434,Poster,Design,Complet,,Complet,Public,Public,Website,Nice step by step web site,https://code.google.com/p/droidbox/
 ,Accelerating incast and multicast traffic delivery for data-intensive applications using physical layer optics,10.1145/2619239.2631436,Poster,Hardware,Hardware,,,,,,,
 ,Social SDN: online social networks integration in wireless network provisioning,10.1145/2619239.2631437,Poster,Design,Self contains,,,,,,,
 ,Flow-level state transition as a new switch primitive for SDN,10.1145/2619239.2631439,Poster,Design,Partial,Send,,,,,,
-,T-DNS: connection-oriented DNS to improve privacy and security (poster abstract),10.1145/2619239.2631442,Poster,Implementation,Partial,Response,,,,,No public script,"https://ant.isi.edu/software/tdns/index.html, https://ant.isi.edu/datasets/all.html, http://www.isi.edu/~johnh/PAPERS/Zhu15b/index.html"
+,T-DNS: connection-oriented DNS to improve privacy and security (poster abstract),10.1145/2619239.2631442,Poster,Implementation,Partial,Response,Partial,Public,Private,,,https://ant.isi.edu/software/tdns/index.html
+,,,,,,,,,,,,https://ant.isi.edu/datasets/all.html
+,,,,,,,,,,,,http://www.isi.edu/~johnh/PAPERS/Zhu15b/index.html
 ,Extending the software-defined network boundary,10.1145/2619239.2631443,Poster,Design,Self contains,Send,,,,,,
 ,A global name service for a highly mobile internetwork,10.1145/2619239.2626331,Paper,Design,Complet,,,,,,,https://gns.name/
 ,Towards a quantitative comparison of location-independent network architectures,10.1145/2619239.2626333,Paper,Measurement,Complet,,,,,,,
-,Lightweight source authentication and path validation,10.1145/2619239.2626323,Paper,Implementation,Partial,Response,,,,,Privacy of source code,
-,Decentralized task-aware scheduling for data center networks,10.1145/2619239.2626322,Paper,Design/Implementation,Partial,Response,,,,,Privacy code source,
-,Efficient coflow scheduling with Varys,10.1145/2619239.2626315,Paper,Implementation,Partial,Response,,,,,,"github.com/coflow/varys, github.com/coflow/coflowsim"
-,Multi-resource packing for cluster schedulers,10.1145/2619239.2626334,Paper,Design/Implementation,Partial,Response,,,,,,"https://github.com/apache/spark, https://issues.apache.org/jira/browse/YARN-2745, http://research.microsoft.com/en-us/UM/redmond/projects/tetris/index.html#Download"
+,Lightweight source authentication and path validation,10.1145/2619239.2626323,Paper,Implementation,Partial,Response,Irreproductible,Private,Private,,,
+,Decentralized task-aware scheduling for data center networks,10.1145/2619239.2626322,Paper,Design/Implementation,Partial,Response,Irreproductible,Private,Private,,,
+,Efficient coflow scheduling with Varys,10.1145/2619239.2626315,Paper,Implementation,Partial,Response,Complet,Public,Public,Github,Nice repository,github.com/coflow/varys
+,,,,,,,,,,,,github.com/coflow/coflowsim
+,Multi-resource packing for cluster schedulers,10.1145/2619239.2626334,Paper,Design/Implementation,Partial,Response,Complet,Public,Public,,,https://github.com/apache/spark
+,,,,,,,,,,,,https://issues.apache.org/jira/browse/YARN-2745
+,,,,,,,,,,,,http://research.microsoft.com/en-us/UM/redmond/projects/tetris/index.html#Download
 ,Application-driven bandwidth guarantees in datacenters,10.1145/2619239.2626326,Paper,Design/Implementation,Partial,Send,,,,,,
 ,Vidyut: exploiting power line infrastructure for enterprise wireless networks,10.1145/2619239.2626329,Paper,Design/Implementation,Partial,Send,,,,,,
 ,Wi-fi backscatter: internet connectivity for RF-powered devices,10.1145/2619239.2626319,Paper,Hardware,Hardware,,,,,,,
 ,Turbocharging ambient backscatter communication,10.1145/2619239.2626312,Paper,Hardware,Hardware,,,,,,,
 ,Geosphere: consistently turning MIMO capacity into throughput,10.1145/2619239.2626301,Paper,Design/Implementation,Partial,Send,,,,,,
-,Calendaring for wide area networks,10.1145/2619239.2626336,Paper,Design,Partial,Response,,,,,Patented algorithm,
+,Calendaring for wide area networks,10.1145/2619239.2626336,Paper,Design,Partial,Response,Irreproductible,Private,Private,,Patented algorithm,
 ,Traffic engineering with forward fault correction,10.1145/2619239.2626314,Paper,Design/Implementation,Partial,Send,,,,,,
-,Dynamic scheduling of network updates,10.1145/2619239.2626307,Paper,Design,Partial,Response,,,,,Will release the code,
-,SDX: a software defined internet exchange,10.1145/2619239.2626300,Paper,Implementation,Complet,,,,,,,https://github.com/sdn-ixp/sdx-pyretic
-,A network-state management service,10.1145/2619239.2626298,Paper,Design/Implementation,Partial,Response,,,,,Privacy,
+,Dynamic scheduling of network updates,10.1145/2619239.2626307,Paper,Design,Partial,Response,Irreproductible,Private,Private,,Will release the code in the futur,
+,SDX: a software defined internet exchange,10.1145/2619239.2626300,Paper,Implementation,Complet,,Complet,Public,Public,,Really nice repository,https://github.com/sdn-ixp/sdx-pyretic
+,A network-state management service,10.1145/2619239.2626298,Paper,Design/Implementation,Partial,Response,Irreproductible,Private,Private,,Production-level code,
 ,VIRL: the virtual internet routing lab,10.1145/2619239.2631463,Poster,Labs,Self contains,,,,,,,
-,SDX: a software defined internet exchange,10.1145/2619239.2631473,Poster,Design,Complet,,,,,,,https://github.com/sdn-ixp/sdx-platform
+,SDX: a software defined internet exchange,10.1145/2619239.2631473,Poster,Design,Complet,,Complet,Public,Public,,,https://github.com/sdn-ixp/sdx-platform
 ,Toward a biometric-aware cloud service engine for multi-screen video applications,10.1145/2619239.2631430,Poster,Design,Partial,Send,,,,,,
 ,SDN-based live VM migration across datacenters,10.1145/2619239.2631431,Poster,Design ,Partial,Send,,,,,,
 ,Characterizing botnets-as-a-service,10.1145/2619239.2631464,Poster,Measurement,Partial,Send,,,,,,
@@ -161,8 +170,10 @@ SIGCOMM-2014,Millions of little minions: using packets for low latency network p
 ,Drawbridge: software-defined DDoS-resistant traffic engineering,10.1145/2619239.2631469,Poster,Design,Self contains,,,,,,,
 ,DesktopDC: setting all programmable data center networking testbed on desk,10.1145/2619239.2631472,Poster,Design,Self contains,,,,,,,
 ,Native Actors: How to Scale Network Forensics,,Poster,Design,Self contains,,,,,,,
-,An experimental study of the learnability of congestion control,10.1145/2619239.2626324,Paper,Design/Implementation,Partial,Response,,,,,,"https://github.com/pratiksha/learnability-reproduce, https://github.com/keithw/remy/, https://github.com/pratiksha/ns2.35/"
-,Friends not foes: synthesizing existing transport strategies for data center networks,10.1145/2619239.2626305,Paper,Design/Implementation,Partial,Response,,,,,,https://www.msu.edu/~munirali/pase.html
+,An experimental study of the learnability of congestion control,10.1145/2619239.2626324,Paper,Design/Implementation,Partial,Response,Complet,Public,Public,,Nice repository,https://github.com/pratiksha/learnability-reproduce
+,,,,,,,,,,,,https://github.com/keithw/remy/
+,,,,,,,,,,,,https://github.com/pratiksha/ns2.35/
+,Friends not foes: synthesizing existing transport strategies for data center networks,10.1145/2619239.2626305,Paper,Design/Implementation,Partial,Response,Partial,Public,Partial,,Not have all script,https://www.msu.edu/~munirali/pase.html
 ,CONGA: distributed congestion-aware load balancing for datacenters,10.1145/2619239.2626316,Paper,Design/Implementation,Partial,Send,,,,,,
 ,,,,,,,,,,,,
 SIGCOMM-2013,B4: experience with a globally-deployed software defined wan,10.1145/2486001.2486019,Paper,Design/Implementation,Partial,Send,,,,,,
@@ -189,34 +200,36 @@ SIGCOMM-2013,B4: experience with a globally-deployed software defined wan,10.114
 ,Supporting application-specific in-network processing in data centres,10.1145/2486001.2491733,Poster,Design,Self contains,,,,,,,
 ,Design and implementation of a framework for software-defined middlebox networking,10.1145/2486001.2491686,Poster,Design,Self contains,,,,,,,
 ,Whole-home gesture recognition using wireless signals (demo),10.1145/2486001.2491687,Poster,Design,Self contains,,,,,,,
-,Locating using prior information: wireless indoor localization algorithm,10.1145/2486001.2491688,Poster,Design,Partial,Response,,,,,Privacy ,https://www.youtube.com/watch?v=ir2KsIoeHMg
+,Locating using prior information: wireless indoor localization algorithm,10.1145/2486001.2491688,Poster,Design,Partial,Response,Irreproductible,Private,Private,,,https://www.youtube.com/watch?v=ir2KsIoeHMg
 ,Automated configuration and measurement of emulated networks with AutoNetkit,10.1145/2486001.2491692,Poster,Management ,Self contains,,,,,,,
 ,Security risks evaluation toolbox for smart grid devices,10.1145/2486001.2491693,Poster,Design,Self contains,,,,,,,
 ,Qphone: a quantum security VoIP phone,10.1145/2486001.2491696,Poster,Hardware,Hardware,,,,,,,
-,A large-scale multipath playground for experimenters and early adopters,10.1145/2486001.2491698,Poster,Design,Complet,,,,,,,http://github.com/nemethf/sigcomm2013
+,A large-scale multipath playground for experimenters and early adopters,10.1145/2486001.2491698,Poster,Design,Complet,,Complet,Public,Public,Github,,http://github.com/nemethf/sigcomm2013
 ,Application-awareness in SDN,10.1145/2486001.2491700,Poster,Design,Partial,Send,,,,,,
 ,HomeLab: a platform for conducting experiments with connected devices in the home,10.1145/2486001.2491701,Poster,Tools,Self contains,,,,,,,
-,OMware: an open measurement ware for stable residential broadband measurement,10.1145/2486001.2491702,Poster,Tools,Partial,Response,,,,,Privacy but omware is updated in kTRxer which will be open source,
+,OMware: an open measurement ware for stable residential broadband measurement,10.1145/2486001.2491702,Poster,Tools,Partial,Response,Irreproductible,Private,Private,,Privacy but omware is updated in kTRxer which will be open source,
 ,Cloud3DView: an interactive tool for cloud data center operations,10.1145/2486001.2491704,Poster,Implementation,Partial,Send,,,,,,
 ,Maple: simplifying SDN programming using algorithmic policies,10.1145/2486001.2486030,Paper,Design,Partial,Send,,,,,,
 ,Forwarding metamorphosis: fast programmable match-action processing in hardware for SDN,10.1145/2486001.2486011,Paper,Hardware,Hardware,,,,,,,
 ,Compressing IP forwarding tables: towards entropy bounds and beyond,10.1145/2486001.2486009,Paper,Design,Self contains,,,,,,,
-,TCP ex machina: computer-generated congestion control,10.1145/2486001.2486020,Paper,Implementation/Measurement,Partial,Response,,,,,,http://web.mit.edu/remy/
-,FCP: a flexible transport framework for accommodating diversity,10.1145/2486001.2486004,Paper,Management ,Partial,Response,,,,,Privacy of code,http://ina.kaist.ac.kr/~dongsuh/paper/fcp-ns2-all.tar.gz
-,Less pain most of the gain: incrementally deployable ICN,10.1145/2486001.2486023,Paper,Measurement,Partial,Response,,,,,URL website down due to old apache,"https://github.com/JRBANCEL/Chromagnon, http://www.idicn.org/"
+,TCP ex machina: computer-generated congestion control,10.1145/2486001.2486020,Paper,Implementation/Measurement,Partial,Response,Complet,Public,Public,Website,Really nice repository,http://web.mit.edu/remy/
+,FCP: a flexible transport framework for accommodating diversity,10.1145/2486001.2486004,Paper,Management ,Partial,Response,Irreproductible,Public,No available,,,http://ina.kaist.ac.kr/~dongsuh/paper/fcp-ns2-all.tar.gz
+,Less pain most of the gain: incrementally deployable ICN,10.1145/2486001.2486023,Paper,Measurement,Partial,Response,Partial,Public,No available,,URL website down due to old apache,https://github.com/JRBANCEL/Chromagnon
+,,,,,,,,,,,,http://www.idicn.org/
 ,Reducing web latency: the virtue of gentle aggression,10.1145/2486001.2486014,Paper,Measurement,Partial,Send,,,,,,
 ,BGP security in partial deployment: is the juice worth the squeeze?,10.1145/2486001.2486010,Paper,Security,Self contains,,,,,,,
 ,PoiRoot: investigating the root cause of interdomain path changes,10.1145/2486001.2486036,Paper,Implementation,Partial,Send,,,,,,
-,Verifiable auctions for online ad exchanges,10.1145/2486001.2486038,Paper,Measurement,Partial,Response,,,,,,
-,Ananta: cloud scale load balancing,10.1145/2486001.2486026,Paper,Implementation,Partial,Response,,,,,Privacy,
+,Verifiable auctions for online ad exchanges,10.1145/2486001.2486038,Paper,Measurement,Partial,Response,Complet,Public,Public,Github,Nice step by step README,https://github.com/sga001/vex/
+,,,,,,,,,,,sebs : vexvmpassword,https://drive.google.com/file/d/0B4S_kXaUiXdVRFEwaVh4UDh0NWs/view?usp=sharing
+,Ananta: cloud scale load balancing,10.1145/2486001.2486026,Paper,Implementation,Partial,Response,Irreproductible,Private,Private,,,
 ,Speeding up distributed request-response workflows,10.1145/2486001.2486028,Paper,Design/Measurement,Partial,Send,,,,,,
-,Leveraging endpoint flexibility in data-intensive clusters,10.1145/2486001.2486021,Paper,Design,Partial,Response,,,,,,https://github.com/mosharaf/sinbad
+,Leveraging endpoint flexibility in data-intensive clusters,10.1145/2486001.2486021,Paper,Design,Partial,Response,Complet,Public,Public,,,https://github.com/mosharaf/sinbad
 ,Characterizing correlated latency anomalies in broadband access networks,10.1145/2486001.2491734,Poster,Tools,Self contains,,,,,,,
 ,Towards fast regular expression matching in practice,10.1145/2486001.2491705,Poster,Implementation/Measurement,Partial,Send,,,,,,
-,Exponential quantization: user-centric rate control for skype calls,10.1145/2486001.2491708,Poster,Measurement,Partial,Response,,,,,Privacy,
+,Exponential quantization: user-centric rate control for skype calls,10.1145/2486001.2491708,Poster,Measurement,Partial,Response,Irreproductible,Private,Private,,,
 ,Which flows are hiding behind my wildcard rule?: adding packet sampling to openflow,10.1145/2486001.2491710,Poster,Design,Self contains,,,,,,,
-,Cooperation policies for efficient in-network caching,10.1145/2486001.2491713,Poster,Management ,Partial,Response,,,,,Not public but can have tar,
-,Smart in-network deduplication for storage-aware SDN,10.1145/2486001.2491714,Poster,Design,Partial,Response,,,,,Not available,
+,Cooperation policies for efficient in-network caching,10.1145/2486001.2491713,Poster,Management ,Partial,Response,,Private but can share,,,Not public but can have tar,
+,Smart in-network deduplication for storage-aware SDN,10.1145/2486001.2491714,Poster,Design,Partial,Response,Irreproductible,Not available,Not available,,,
 ,A software defined approach to unified IPv6 transition,10.1145/2486001.2491715,Poster,Design,Self contains,,,,,,,
 ,Characterizing and detecting malicious crowdsourcing,10.1145/2486001.2491719,Poster,Measurement,Partial,Send,,,,,,
 ,Harnessing receive diversity in distributed multi-user MIMO networks,10.1145/2486001.2491720,Poster,Design,Self contains,,,,,,,
@@ -224,26 +237,27 @@ SIGCOMM-2013,B4: experience with a globally-deployed software defined wan,10.114
 ,Making intra-domain traffic engineering resistant to failures,10.1145/2486001.2491730,Poster,Design,Self contains,,,,,,,
 ,The effectiveness of time dependent pricing in controlling usage incentives in wireless data network,10.1145/2486001.2491731,Poster,Design,Self contains,,,,,,,
 ,R2D2: bufferless switchless data center networks using commodity ethernet hardware,10.1145/2486001.2491722,Poster,Design,Self contains,,,,,,,
-,Interest set mechanism to improve the transport of named data networking,10.1145/2486001.2491723,Poster,Design,Partial,Response,,,,,Not keep/maintain the script,
+,Interest set mechanism to improve the transport of named data networking,10.1145/2486001.2491723,Poster,Design,Partial,Response,Irreproductible,No available,No available,,Not keep/maintain the script,
 ,The architecture and traffic management of wireless collaborated hybrid data center network,10.1145/2486001.2491724,Poster,Design,Self contains,,,,,,,
 ,D-tunes: self tuning datastores for geo-distributed interactive applications,10.1145/2486001.2491684,Poster,Design,Self contains,,,,,,,
-,On HTTP live streaming in large enterprises,10.1145/2486001.2491685,Poster,Design,Complet,,,,,,Privacy,
+,On HTTP live streaming in large enterprises,10.1145/2486001.2491685,Poster,Design,Complet,,,,,,Privacy,http://www.peerialism.com/
 ,An evaluation testbed for adaptive topology-aware deployment of elastic applications,10.1145/2486001.2491689,Poster,Design,Self contains,,,,,,,
 ,AutoEmbed: automated multi-provider virtual network embedding,10.1145/2486001.2491690,Poster,Design,Self contains,,,,,,,
 ,Contextualized information-centric home network,10.1145/2486001.2491691,Poster,Design,Self contains,,,,,,,
 ,Incremental SDN deployment in enterprise networks,10.1145/2486001.2491694,Poster,Design,Self contains,,,,,,,
-,Automatic configuration of routing control platforms in OpenFlow networks,10.1145/2486001.2491695,Poster,Design,Partial,Response,,,,,https://github.com/routeflow/AutomaticConfigurationRouteFlow,
+,Automatic configuration of routing control platforms in OpenFlow networks,10.1145/2486001.2491695,Poster,Design,Partial,Response,Partial,Public,Private,,https://github.com/routeflow/AutomaticConfigurationRouteFlow,
 ,Dispatch: secure resilient mobile reporting,10.1145/2486001.2491697,Poster,Design,Self contains,,,,,,,
-,Named data networking on a router: forwarding at 20gbps and beyond,10.1145/2486001.2491699,Poster,Design,Partial,Response,,,,,Developed on target system and no more available,
+,Named data networking on a router: forwarding at 20gbps and beyond,10.1145/2486001.2491699,Poster,Design,Partial,Response,Irreproductible,No available,No available,,Developed on target system and no more available,
 ,Seamless interworking of SDN and IP,10.1145/2486001.2491703,Poster,Design,Self contains,,,,,,,
-,A provider-side view of web search response time,10.1145/2486001.2486035,Paper,Measurement,Partial,Send,,,,,,
-,Trinocular: understanding internet reliability through adaptive probing,10.1145/2486001.2486017,Paper,Measurement,Url fail,Send,,,,,Some URL fail,
+,A provider-side view of web search response time,10.1145/2486001.2486035,Paper,Measurement,Partial,Response,Irreproductible,Private,Private,,Using libraries use in production,
+,Trinocular: understanding internet reliability through adaptive probing,10.1145/2486001.2486017,Paper,Measurement,Url fail,Response,Irreproductible,Private,,,Some URL fail,ftp://ftp.isi.edu/isi-pubs/tr-678.pdf
+,,,,,,,,,,,dataset :,https://ant.isi.edu/datasets/internet_outages/
 ,An empirical reexamination of global DNS behavior,10.1145/2486001.2491716,Paper,Measurement,Partial,Send,,,,,,
 ,Mosaic: quantifying privacy leakage in mobile networks,10.1145/2486001.2486008,Paper,Design,Partial,Send,,,,,,
 ,Expressive privacy control with pseudonyms,10.1145/2486001.2486032,Paper,Design,Partial,Send,,,,,,
 ,Towards efficient traffic-analysis resistant anonymity networks,10.1145/2486001.2486002,Paper,Design,Partial,Send,,,,,,
-,SplitX: high-performance private analytics,10.1145/2486001.2486013,Paper,Design,Partial,Response,,,,,,https://gitlab.com/ruichuan/SplitX.git
-,Participatory networking: an API for application control of SDNs,10.1145/2486001.2486003,Paper,Design,Partial,Response,,,,,,pane.cs.brown.edu
+,SplitX: high-performance private analytics,10.1145/2486001.2486013,Paper,Design,Partial,Response,Partial,Public,No available,,,https://gitlab.com/ruichuan/SplitX.git
+,Participatory networking: an API for application control of SDNs,10.1145/2486001.2486003,Paper,Design,Partial,Response,Complet,Public,Public,Website,,pane.cs.brown.edu
 ,Developing a predictive model of quality of experience for internet video,10.1145/2486001.2486025,Paper,Design,Self contains,,,,,,,
 ,ElasticSwitch: practical work-conserving bandwidth guarantees for cloud computing,10.1145/2486001.2486027,Paper,Design,Partial,???,,,,,,
 ,An in-depth study of LTE: effect of network protocol and application behavior on performance,10.1145/2486001.2486006,Paper,Design,Partial,Send,,,,,,
