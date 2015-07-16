@@ -28,6 +28,8 @@ LINK   = 12
 SEND = "Send"
 RESPONSE = "Response"
 SELF = "Self contains"
+HARD = "Hardware"
+COMPLET = "Complet"
 
 PAPER = "Paper"
 POSTER = "Poster"
@@ -101,8 +103,8 @@ def camenbert(i, sizes, labels, dpi, save) :
     fig = figure(i,figsize=(8,5))
     ax = fig.add_subplot(111, autoscale_on=False, xlim=(-1,5), ylim=(-4,3))
 
-    colors = ['yellowgreen', 'gold', 'lightskyblue','lightcoral']
-    explode = (0, 0.1, 0) 
+    colors = ['red', 'yellowgreen', 'gold', 'lightskyblue','lightcoral']
+    explode = (0.1, 0.1, 0.1, 0.1, 0.1) 
     plt.pie(sizes, explode=explode, labels=labels, colors=colors,
             autopct='%1.1f %% ', shadow=True, startangle=90)
 
@@ -135,9 +137,15 @@ i=0
 for (ps, n) in base :
     nSend = count(lambda p: SEND in p.infos[MAIL], ps)
     nResponse = count(lambda p: RESPONSE in p.infos[MAIL], ps)
+    nComplet = count(lambda p: COMPLET in p.infos[PINFO], ps)
+    nSelf = count(lambda p: SELF in p.infos[PINFO], ps)
+    nHardware = count(lambda p: HARD in p.infos[PINFO], ps)
     nMail = len(ps)
 
-    camenbert(i,[nSend, nResponse, nMail-(nSend+nResponse)],
-                ['No reply', 'Response', 'No send'] , 1000, "piechart_mail/piechart_mail-{}.png".format(n))
+    camenbert(i,[nSend, nResponse, nComplet, nSelf, nHardware],
+                ['No reply', 'Response', 'Complet', 'Self', 'Hardware'] , 1000, "piechart_mail/piechart_mail-{}.png".format(n))
     i+=1
+
+
+
 
