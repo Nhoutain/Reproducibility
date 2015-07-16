@@ -138,6 +138,6 @@ for (ps, n) in base :
     nMail = len(ps)
 
     camenbert(i,[nSend, nResponse, nMail-(nSend+nResponse)],
-                ['No reply', 'Response', 'No send'] , 1000, "piechart_mail-{}.png".format(n))
+                ['No reply', 'Response', 'No send'] , 1000, "piechart_mail/piechart_mail-{}.png".format(n))
     i+=1
 
