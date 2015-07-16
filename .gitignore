@@ -125,9 +125,14 @@ sympy-plots-for-*.tex/
 *.bak
 *.sav
 
+# Vim
+*.swp
+
 # csv
 *.csv#
 
+# generated png
+stat/*.png
 
 # Response directory
 Response/*
