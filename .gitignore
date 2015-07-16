@@ -132,7 +132,7 @@ sympy-plots-for-*.tex/
 *.csv#
 
 # generated png
-stat/*.png
+stat/*/*.png
 
 # Response directory
 Response/*
