@@ -97,8 +97,8 @@ def count(fct, l) :
 # |  __/| | (_) | |_ 
 # |_|   |_|\___/ \__|
                    
-def camenbert(sizes, labels, dpi, save) :
-    fig = figure(1,figsize=(8,5))
+def camenbert(i, sizes, labels, dpi, save) :
+    fig = figure(i,figsize=(8,5))
     ax = fig.add_subplot(111, autoscale_on=False, xlim=(-1,5), ylim=(-4,3))
 
     colors = ['yellowgreen', 'gold', 'lightskyblue','lightcoral']
@@ -109,9 +109,9 @@ def camenbert(sizes, labels, dpi, save) :
     # Set aspect ratio to be equal so that pie is drawn as a circle.
     plt.axis('equal')
 
-    savefig(save,dpi=dpi)
+    savefig(save)
 
-    plt.show()
+    #plt.show()
 
 
 #  ____  _        _   
@@ -126,17 +126,18 @@ reading("../Analysis.csv")
 
 
 # Papers by conference
-base = map(lambda x: filter(lambda y: y.infos[CONF] == x, papers), conferences)
-base.insert(0,papers)
 
+base = map(lambda x: (filter(lambda y: x in y.infos[CONF], papers), x), conferences)
+base.insert(0,(papers, "Global"))
 
 # Generated piechart 
-for ps in base :
-
+i=0
+for (ps, n) in base :
     nSend = count(lambda p: SEND in p.infos[MAIL], ps)
     nResponse = count(lambda p: RESPONSE in p.infos[MAIL], ps)
     nMail = len(ps)
 
-    camenbert([nSend, nResponse, nMail-(nSend+nResponse)],
-                ['No reply', 'Response', 'No send'] , 100, "a.png")
+    camenbert(i,[nSend, nResponse, nMail-(nSend+nResponse)],
+                ['No reply', 'Response', 'No send'] , 1000, "piechart_mail-{}.png".format(n))
+    i+=1
 

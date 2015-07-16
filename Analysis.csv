@@ -279,7 +279,7 @@ CoNEXT-2014,Analyzing and Boosting the Performance of Power-Line Communication N
 ,"The Cost of the ""S"" in HTTPS",10.1145/2674005.2674991,Paper,Measurement,Partial,Response,Partial,Public,Private,Github,,https://github.com/dtnaylor/web-profiler
 ,,,,,,,,,,,,https://github.com/dtnaylor/android-web-probe
 ,A Tangled Mass: The Android Root Certificate Stores,10.1145/2674005.2675015,Paper,Measurement,Self contains,,,,,,,
-,FlowBender: Flow-level Adaptive Routing for Improved Latency and Throughput in Datacenter Networks,10.1145/2674005.2674985,Paper,Design,Partial,Send,,,,,,
+,FlowBender: Flow-level Adaptive Routing for Improved Latency and Throughput in Datacenter Networks,10.1145/2674005.2674985,Paper,Design,Partial,Response,Irreproductible,Private,Private,,,
 ,Distributed Route Aggregation on the Global Network,10.1145/2674005.2674999,Paper,Design/Implementation,Partial,Response,Complet,Public,Public,Website,http://www.route-aggregation.net/,
 ,COLD: PoP-level Network Topology Synthesis,10.1145/2674005.2675012,Paper,Design/Implementation,Partial,Send,,,,,,
 ,Remote Peering: More Peering without Internet Flattening,10.1145/2674005.2675013,Paper,Mathematical/Measurement,Partial,Repsonse,Partial,No need,API changed,,LG's website change so the script is no more valid,
@@ -315,13 +315,13 @@ CoNEXT-2013,Crowd-assisted search for price discrimination in e-commerce: first 
 ,"Aspen trees: balancing data center fault tolerance,  scalability and cost",10.1145/2535372.2535383,,Design,Partial,Send,,,,,,
 ,"Scalable,  high performance ethernet forwarding with CuckooSwitch",10.1145/2535372.2535379,,Design,Partial,Send,,,,,,
 ,Scheduling packets over multiple interfaces while respecting user preferences,10.1145/2535372.2535387,,Design,Partial,Send,,,,,,
-,On limitations of network acceleration,10.1145/2535372.2535412,,Measurement,Partial,Send,,,,,,
+,On limitations of network acceleration,10.1145/2535372.2535412,,Measurement,Partial,Wait,,,,,,
 ,Now or later?: delaying data transfer in time-critical aerial communication,10.1145/2535372.2535409,,,,???,,,,,,
 ,Bullet trains: a study of NIC burst behavior at microsecond timescales,10.1145/2535372.2535407,,Measurement,Partial,Send,,,,,,
 ,FasTrak: enabling express lanes in multi-tenant data centers,10.1145/2535372.2535386,,Design,Partial,Send,,,,,,
 ,"Scalable,  optimal flow routing in datacenters via local link balancing",10.1145/2535372.2535397,,Design,Partial,Send,,,,,,
 ,SoftCell: scalable and flexible cellular core network architecture,10.1145/2535372.2535377,,Design,Partial,Send,,,,,,
-,Robust assessment of changes in cellular networks,10.1145/2535372.2535382,,Measurement,Partial,Send,,,,,,
+,Robust assessment of changes in cellular networks,10.1145/2535372.2535382,,Measurement,Partial,Resopnse,Irreproductible,Private,Private,,,
 ,3GOL: power-boosting ADSL using 3G onloading,10.1145/2535372.2535400,,Design,Partial,Send,,,,,,
 ,Capturing mobile experience in the wild: a tale of two apps,10.1145/2535372.2535391,,Measurement,???,,,,,,,http://networktest.org/
 ,Silent TCP connection closure for cellular networks,10.1145/2535372.2535402,,Design,Partial,Send,,,,,,
@@ -343,7 +343,7 @@ CoNEXT-2013,Crowd-assisted search for price discrimination in e-commerce: first 
 ,Geography matters: building an efficient transport network for a better video conferencing experience,10.1145/2535372.2535395,,Design,Partial,Send,,,,,,
 ,DOMINO: relative scheduling in enterprise wireless LANs,10.1145/2535372.2535401,,Design/Implementation,Partial,Send,,,,,,
 ,On the benefits of applying experimental design to improve multipath TCP,10.1145/2535372.2535403,,Measurement,Complet,,Complet,No need,Public,,,http://multipath-tcp.org/conext2013
-,DomainFlow: practical flow management method using multiple flow tables in commodity switches,10.1145/2535372.2535406,,Design,Partial,Send,,,,,,
-,RiskRoute: a framework for mitigating network outage threats,10.1145/2535372.2535385,,Design,Partial,Send,,,,,,
+,DomainFlow: practical flow management method using multiple flow tables in commodity switches,10.1145/2535372.2535406,,Design,Partial,Response,Irreproductible,Private,Private,,,
+,RiskRoute: a framework for mitigating network outage threats,10.1145/2535372.2535385,,Design,Partial,Wait,,,,,,http://pages.cs.wisc.edu/~pb/software_data.html
 ,CoDef: collaborative defense against large-scale link-flooding attacks,10.1145/2535372.2535398,,Design,Partial,Send,,,,,,
 ,Federated flow-based approach for privacy preserving connectivity tracking,10.1145/2535372.2535388,,Measurement,Partial,Send,,No need,,,,
