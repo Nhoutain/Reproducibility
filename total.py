@@ -18,11 +18,11 @@ for line in open("horaire.txt") :
 
         total += mins
         days  += 1
-        print( "On {} you work {}h{}".format(date, mins/60, mins%60) )
+        print( "On {0} you work {1}h{2:02d}".format(date, mins/60, mins%60) )
 
 
 print( "---" )
-print( "Total : {}h{} on {} days  =>  {}h{} in average".format(total/60, total%60, days, total/60/days, (total/days)%60) )
+print( "Total : {0}h{1:02d} on {2} days  =>  {3}h{4:02d} in average".format(total/60, total%60, days, total/60/days, (total/days)%60) )
 
 
 
