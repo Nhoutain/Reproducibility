@@ -131,3 +131,7 @@ sympy-plots-for-*.tex/
 
 # Response directory
 Response/*
+
+# Horaire file
+horaire.txt
+total.py
