@@ -117,7 +117,7 @@ def camenbert(i, sizes, labels, dpi, save) :
 
 def bars(i, sizes, colors, legendes, names, title, save): 
 
-    fig = figure(i,figsize=(8,8)
+    fig = figure(i,figsize=(8,8))
     ax = fig.add_subplot(111, autoscale_on=False, xlim=(-0.65,7), ylim=(0,4))
 
     N = len(sizes[0][0])
@@ -166,46 +166,44 @@ def bars(i, sizes, colors, legendes, names, title, save):
 reading("../Analysis.csv")
 
 
-# Papers by conference
-
-base = map(lambda x: (filter(lambda y: x in y.infos[CONF], papers), x), conferences)
+# Papers by conference and remove hardware
+base = map(lambda x: (filter(lambda y: x in y.infos[CONF] and
+                   not HARD in y.infos[PINFO] , papers), x), conferences)
 base.insert(0,(papers, "Global"))
 
 # Generated piechart 
 i=0
-#for (ps, n) in base :
-#    nSend     = count(lambda p: SEND in p.infos[MAIL], ps)
-#    nResponse = count(lambda p: RESPONSE in p.infos[MAIL], ps)
-#    nComplet  = count(lambda p: COMPLET in p.infos[PINFO], ps)
-#    nSelf     = count(lambda p: SELF in p.infos[PINFO], ps)
-#    nHardware = count(lambda p: HARD in p.infos[PINFO], ps)
-#    nMail     = len(ps)
-#
-#    camenbert(i,[nSend, nResponse, nComplet, nSelf, nHardware],
-#                ['No reply', 'Response', 'Complet', 'Self', 'Hardware'] , 1000, "piechart_mail/piechart_mail-{}.png".format(n))
-#    i+=1
+for (ps, n) in base :
+    nSend     = count(lambda p: SEND in p.infos[MAIL], ps)
+    nResponse = count(lambda p: RESPONSE in p.infos[MAIL], ps)
+    nComplet  = count(lambda p: COMPLET in p.infos[PINFO], ps)
+    nSelf     = count(lambda p: SELF in p.infos[PINFO], ps)
+    nHardware = count(lambda p: HARD in p.infos[PINFO], ps)
+    nMail     = len(ps)
+
+    camenbert(i,[nSend, nResponse, nComplet, nSelf, nHardware],
+                ['No reply', 'Response', 'Complet', 'Self', 'Hardware'] , 1000, "piechart_mail/piechart_mail-{}.png".format(n))
+    i+=1
 
 
 nSend     = []
 nResponse = []
 nComplet  = []
 nSelf     = []
-nHardware = []
 nMail     = []
 names     = []
 
 for (ps, n) in base :
-    nMail = len(ps)
+    nMail = len(ps) 
     nSend    .append( (100.0/nMail)*count(lambda p: SEND in p.infos[MAIL], ps) )
     nResponse.append( (100.0/nMail)*count(lambda p: RESPONSE in p.infos[MAIL], ps) )
     nComplet .append( (100.0/nMail)*count(lambda p: COMPLET in p.infos[PINFO], ps) )
     nSelf    .append( (100.0/nMail)*count(lambda p: SELF in p.infos[PINFO], ps) )
-    nHardware.append( (100.0/nMail)*count(lambda p: HARD in p.infos[PINFO], ps) )
     names    .append(n)
 
 
-bars(i,[[nComplet, nSelf, nHardware], [nSend, nResponse]],
-            [['r', 'g', 'b'], ['y', 'r']],
+bars(i,[[nComplet, nSelf], [nSend, nResponse]],
+            [['gold', 'lightskyblue'], ['lightcoral', 'yellowgreen']],
             [['Complet', 'Self contains', 'Hardware'], ['Wait response', 'Response']],
             names, "Result of Analysis.csv", 'bar_mail/bar_mail-all.png')
                 #['No reply', 'Response', 'Complet', 'Self', 'Hardware'] , 1000, "piechart_mail/piechart_mail-{}.png".format(n))
