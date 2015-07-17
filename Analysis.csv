@@ -18,7 +18,7 @@ Hotnets-2014,Internet at the speed of light,10.1145/2670518.2673876,Paper,Measur
 ,DNS Resolvers Considered Harmful,10.1145/2670518.2673881,Paper,Seurity/Design,Self contains,,,,,,,
 ,Crowdsourcing Access Network Spectrum Allocation Using Smartphones,10.1145/2670518.2673866,Paper,,Partial,Response,Complet,Public,Private,Github and webplatform,We can add our experiment and get the result on webplatform,https://github.com/blue-systems-group/ 
 ,,,,,,,,,,,,https://phone-lab.org/experiment/request/ 
-,PEERING: An AS for Us,10.1145/2670518.2673887,Paper,,Partial,Response,???,No available,No available,webplatform,Acces to a platform,http://peering.usc.edu  
+,PEERING: An AS for Us,10.1145/2670518.2673887,Paper,,Partial,Response,Platform,No available,No available,webplatform,Acces to a platform,http://peering.usc.edu  
 ,Infrastructure Mobility: A What-if Analysis,10.1145/2670518.2673862,Paper,,Partial,Response,Work in progress,No available,No available,,Fuller paper in submission,
 ,NetEgg: Programming Network Policies by Examples,10.1145/2670518.2673879,Paper,Implementation,Partial,Response,Complet,Private,Private,.tgz by mail,Privacyﾠbut give a tar,
 ,A Highly Available Software Defined Fabric,10.1145/2670518.2673884,Paper,Theoretical,Self contains,,,,,,,
@@ -182,7 +182,7 @@ SIGCOMM-2013,B4: experience with a globally-deployed software defined wan,10.114
 ,CSPAN: cost-effective geo-replicated storage spanning multiple cloud services,10.1145/2486001.2491707,Poster,Design,Self contains,,,,,,,
 ,Replication free rule grouping for packet classification,10.1145/2486001.2491709,Poster,Algorithm,Self contains,,,,,,,
 ,A (not) NICE way to verify the openflow switch specification: formal modelling of the openflow switch using alloy,10.1145/2486001.2491711,Poster,Design,Self contains,,,,,,,
-,The contagion of malicious behaviors in online games,10.1145/2486001.2491712,Poster,Measurement,Partial,Send,,,,,,
+,The contagion of malicious behaviors in online games,10.1145/2486001.2491712,Poster,Measurement,Partial,Response,,No need,Private,,Give the dataset,
 ,An empirical study of analog channel feedback,10.1145/2486001.2486018,Poster,Measurement,Partial,Send,,,,,,
 ,Toward content-centric privacy in ICN: attribute-based encryption and routing,10.1145/2486001.2491717,Poster,Design,Self contains,,,,,,,
 ,Don't drop detour!,10.1145/2486001.2491718,Poster,Measurement,Partial,Send,,,,,,
@@ -232,7 +232,7 @@ SIGCOMM-2013,B4: experience with a globally-deployed software defined wan,10.114
 ,Making intra-domain traffic engineering resistant to failures,10.1145/2486001.2491730,Poster,Design,Self contains,,,,,,,
 ,The effectiveness of time dependent pricing in controlling usage incentives in wireless data network,10.1145/2486001.2491731,Poster,Design,Self contains,,,,,,,
 ,R2D2: bufferless switchless data center networks using commodity ethernet hardware,10.1145/2486001.2491722,Poster,Design,Self contains,,,,,,,
-,Interest set mechanism to improve the transport of named data networking,10.1145/2486001.2491723,Poster,Design,Partial,Response,Irreproductible,No available,No found,Cannot found the script,Not keep/maintain the script,
+,Interest set mechanism to improve the transport of named data networking,10.1145/2486001.2491723,Poster,Design,Partial,Response,Irreproductible,No available,No found,,Not keep/maintain the script,
 ,The architecture and traffic management of wireless collaborated hybrid data center network,10.1145/2486001.2491724,Poster,Design,Self contains,,,,,,,
 ,D-tunes: self tuning datastores for geo-distributed interactive applications,10.1145/2486001.2491684,Poster,Design,Self contains,,,,,,,
 ,On HTTP live streaming in large enterprises,10.1145/2486001.2491685,Poster,Design,Complet,,,,,,Privacy,http://www.peerialism.com/
@@ -268,7 +268,7 @@ CoNEXT-2014,Analyzing and Boosting the Performance of Power-Line Communication N
 ,Filtering Noisy 802.11 Time-of-Flight Ranging Measurements,10.1145/2674005.2674998,Paper,Measurement,Partial,Send,,,,,,
 ,Communication Networks of Visible Light Emitting Diodes with Intra-Frame Bidirectional Transmission,10.1145/2674005.2675000,Paper,Design,Partial,Response,Work in progress,Private,Private,,Plan to make it open source in future,
 ,MIDAS: Empowering 802.11ac Networks with Multiple-Input Distributed Antenna Systems,10.1145/2674005.2675014,Paper,Design,Partial,Send,,,,,,
-,MoFA: Mobility-aware Frame Aggregation in Wi-Fi,10.1145/2674005.2674995,Paper,Design,Partial,Send,,,,,,
+,MoFA: Mobility-aware Frame Aggregation in Wi-Fi,10.1145/2674005.2674995,Paper,Design,Partial,Send,,Mail share,Mail share,,No publicly available code but send by mail,
 ,Bringing Mobility-Awareness to WLANs using PHY Layer Information,10.1145/2674005.2675017,Paper,Design,Partial,Send,,,,,,
 ,Measurement-Augmented Spectrum Databases for White Space Spectrum,10.1145/2674005.2675001,Paper,Measurement,Partial,Send,,,,,,
 ,Cuckoo Filter: Practically Better Than Bloom,10.1145/2674005.2674994,Paper,Design,No script,Send,,,,,,https://github.com/efficient/cuckoofilter
@@ -303,47 +303,47 @@ CoNEXT-2014,Analyzing and Boosting the Performance of Power-Line Communication N
 ,Scotch: Elastically Scaling up SDN Control-Plane using vSwitch based Overlay,10.1145/2674005.2675002,Paper,Design/Implementation,Partial,Send,,,,,,
 ,Providing Reliable FIB Update Acknowledgments in SDN,10.1145/2674005.2675006,Paper,Design,Partial,Response,Work in progress,Private,Private,,Will prepare a release by monday,
 ,,,,,,,,,,,,
-CoNEXT-2013,Crowd-assisted search for price discrimination in e-commerce: first results,10.1145/2535372.2535415,,Measurement,No script,Send,,,,,,
-,A first look at IPv4 transfer markets,10.1145/2535372.2535416,,Study,Self contains,,,,,,,
-,"Optimizing the ""one big switch"" abstraction in software-defined networks",10.1145/2535372.2535373,,Implementation,Partial,Response,Partial,Public,No available,,,http://www.cs.princeton.edu/~nkang/research/
-,An adaptive flow counting method for anomaly detection in SDN,10.1145/2535372.2535411,,Design,Partial,Send,,,,,,
-,Virtualizing the access network via open APIs,10.1145/2535372.2535381,,Design,Partial,Send,,,,,,
-,Distributed resource control using shadowed subgraphs,10.1145/2535372.2535410,,Design,Self contains,,,,,,,
-,"Per-packet load-balanced,  low-latency routing for clos-based data center networks",10.1145/2535372.2535375,,Design/Implementation,Partial,Response,Partial,Private,Private,,Can give me a read access on his bitbucket,
-,Scaling IP multicast on datacenter topologies,10.1145/2535372.2535380,,Design,Partial,Response,Irreproductible,Private,Not documented,,,
-,Explicit multipath congestion control for data center networks,10.1145/2535372.2535384,,Design/Implementation,Partial,Response,,,,,,http://routing.netlab.edu.cn/tiki-index.php?page=Yu+Cao
-,"Aspen trees: balancing data center fault tolerance,  scalability and cost",10.1145/2535372.2535383,,Design,Partial,Send,,,,,,
-,"Scalable,  high performance ethernet forwarding with CuckooSwitch",10.1145/2535372.2535379,,Design,Partial,Send,,,,,,
-,Scheduling packets over multiple interfaces while respecting user preferences,10.1145/2535372.2535387,,Design,Partial,Send,,,,,,
-,On limitations of network acceleration,10.1145/2535372.2535412,,Measurement,Partial,Wait,,,,,,
-,Now or later?: delaying data transfer in time-critical aerial communication,10.1145/2535372.2535409,,,,???,,,,,,
-,Bullet trains: a study of NIC burst behavior at microsecond timescales,10.1145/2535372.2535407,,Measurement,Partial,Send,,,,,,
-,FasTrak: enabling express lanes in multi-tenant data centers,10.1145/2535372.2535386,,Design,Partial,Send,,,,,,
-,"Scalable,  optimal flow routing in datacenters via local link balancing",10.1145/2535372.2535397,,Design,Partial,Send,,,,,,
-,SoftCell: scalable and flexible cellular core network architecture,10.1145/2535372.2535377,,Design,Partial,Send,,,,,,
-,Robust assessment of changes in cellular networks,10.1145/2535372.2535382,,Measurement,Partial,Resopnse,Irreproductible,Private,Private,,,
-,3GOL: power-boosting ADSL using 3G onloading,10.1145/2535372.2535400,,Design,Partial,Send,,,,,,
-,Capturing mobile experience in the wild: a tale of two apps,10.1145/2535372.2535391,,Measurement,???,,,,,,,http://networktest.org/
-,Silent TCP connection closure for cellular networks,10.1145/2535372.2535402,,Design,Partial,Send,,,,,,
-,Direct code execution: revisiting library OS architecture for reproducible network experiments,10.1145/2535372.2535374,,Measurement,Complet,,Complet,Public,Public,,,https://www.nsnam.org/docs/dce/manual/html/index.html
-,Pythia: yet another active probing technique for alias resolution,10.1145/2535372.2535413,,Design,No script,Send,,Public,,,,
-,An automated system for emulated network experimentation,10.1145/2535372.2535378,,Design,Self contains,,,,,,,
-,Inferring multilateral peering,10.1145/2535372.2535390,,Design,Partial,Send,,,,,,
-,Minimizing network complexity through integrated top-down design,10.1145/2535372.2535376,,Design,Partial,Response,Irreproductible,Private,Private,,,
-,Understanding tradeoffs in incremental deployment of new network architectures,10.1145/2535372.2535396,,Management ,Partial,Send,,,,,,
-,Low latency via redundancy,10.1145/2535372.2535392,,Measurement,Partial,Response,,No need,Private,,Can give me a tar with code,
-,Socket intents: leveraging application awareness for multi-access connectivity,10.1145/2535372.2535405,,Design,Partial,Send,,,,,,
-,Towards a SPDY'ier mobile web?,10.1145/2535372.2535399,,Measurement,Partial,Response,,No need,Private,,Give some details in order to recreate the script,
-,Staying online while mobile: the hidden costs,10.1145/2535372.2535408,,Measurement,Partial,Response,,Public,,,,http://rilanalyzer.smart-e.org/
-,Is there a case for mobile phone content pre-staging?,10.1145/2535372.2535414,,Measurement,Partial,Response,,No need,Too related with data,,,
-,RFID shakables: pairing radio-frequency identification tags with the help of gesture recognition,10.1145/2535372.2535404,,Design,Partial,Response,Irreproductible,Private,Private,,,
-,Resource thrifty secure mobile video transfers on open WiFi networks,10.1145/2535372.2535389,,Design,Partial,Send,,,,,,
-,Enhancing video accessibility and availability using information-bound references,10.1145/2535372.2535393,,Design,Self contains,,,,,,,
-,Shedding light on the structure of internet video quality problems in the wild,10.1145/2535372.2535394,,Measurement,Partial,Send,,,,,,
-,Geography matters: building an efficient transport network for a better video conferencing experience,10.1145/2535372.2535395,,Design,Partial,Send,,,,,,
-,DOMINO: relative scheduling in enterprise wireless LANs,10.1145/2535372.2535401,,Design/Implementation,Partial,Send,,,,,,
-,On the benefits of applying experimental design to improve multipath TCP,10.1145/2535372.2535403,,Measurement,Complet,,Complet,No need,Public,,,http://multipath-tcp.org/conext2013
-,DomainFlow: practical flow management method using multiple flow tables in commodity switches,10.1145/2535372.2535406,,Design,Partial,Response,Irreproductible,Private,Private,,,
-,RiskRoute: a framework for mitigating network outage threats,10.1145/2535372.2535385,,Design,Partial,Wait,,,,,,http://pages.cs.wisc.edu/~pb/software_data.html
-,CoDef: collaborative defense against large-scale link-flooding attacks,10.1145/2535372.2535398,,Design,Partial,Send,,,,,,
-,Federated flow-based approach for privacy preserving connectivity tracking,10.1145/2535372.2535388,,Measurement,Partial,Send,,No need,,,,
+CoNEXT-2013,Crowd-assisted search for price discrimination in e-commerce: first results,10.1145/2535372.2535415,Paper,Measurement,No script,Send,,,,,,
+,A first look at IPv4 transfer markets,10.1145/2535372.2535416,Paper,Study,Self contains,,,,,,,
+,"Optimizing the ""one big switch"" abstraction in software-defined networks",10.1145/2535372.2535373,Paper,Implementation,Partial,Response,Partial,Public,No available,,,http://www.cs.princeton.edu/~nkang/research/
+,An adaptive flow counting method for anomaly detection in SDN,10.1145/2535372.2535411,Paper,Design,Partial,Send,,,,,,
+,Virtualizing the access network via open APIs,10.1145/2535372.2535381,Paper,Design,Partial,Send,,,,,,
+,Distributed resource control using shadowed subgraphs,10.1145/2535372.2535410,Paper,Design,Self contains,,,,,,,
+,"Per-packet load-balanced,  low-latency routing for clos-based data center networks",10.1145/2535372.2535375,Paper,Design/Implementation,Partial,Response,Partial,Private,Private,,Can give me a read access on his bitbucket,
+,Scaling IP multicast on datacenter topologies,10.1145/2535372.2535380,Paper,Design,Partial,Response,Irreproductible,Private,Not documented,,,
+,Explicit multipath congestion control for data center networks,10.1145/2535372.2535384,Paper,Design/Implementation,Partial,Response,,,,,,http://routing.netlab.edu.cn/tiki-index.php?page=Yu+Cao
+,"Aspen trees: balancing data center fault tolerance,  scalability and cost",10.1145/2535372.2535383,Paper,Design,Partial,Send,,,,,,
+,"Scalable,  high performance ethernet forwarding with CuckooSwitch",10.1145/2535372.2535379,Paper,Design,Partial,Send,,,,,,
+,Scheduling packets over multiple interfaces while respecting user preferences,10.1145/2535372.2535387,Paper,Design,Partial,Send,,,,,,
+,On limitations of network acceleration,10.1145/2535372.2535412,Paper,Measurement,Partial,Wait,,,,,,
+,Now or later?: delaying data transfer in time-critical aerial communication,10.1145/2535372.2535409,Paper,,,???,,,,,,
+,Bullet trains: a study of NIC burst behavior at microsecond timescales,10.1145/2535372.2535407,Paper,Measurement,Partial,Send,,,,,,
+,FasTrak: enabling express lanes in multi-tenant data centers,10.1145/2535372.2535386,Paper,Design,Partial,Send,,,,,,
+,"Scalable,  optimal flow routing in datacenters via local link balancing",10.1145/2535372.2535397,Paper,Design,Partial,Send,,,,,,
+,SoftCell: scalable and flexible cellular core network architecture,10.1145/2535372.2535377,Paper,Design,Partial,Send,,,,,,
+,Robust assessment of changes in cellular networks,10.1145/2535372.2535382,Paper,Measurement,Partial,Resopnse,Irreproductible,Private,Private,,,
+,3GOL: power-boosting ADSL using 3G onloading,10.1145/2535372.2535400,Paper,Design,Partial,Send,,,,,,
+,Capturing mobile experience in the wild: a tale of two apps,10.1145/2535372.2535391,Paper,Measurement,???,,,,,,,http://networktest.org/
+,Silent TCP connection closure for cellular networks,10.1145/2535372.2535402,Paper,Design,Partial,Send,,,,,,
+,Direct code execution: revisiting library OS architecture for reproducible network experiments,10.1145/2535372.2535374,Paper,Measurement,Complet,,Complet,Public,Public,,,https://www.nsnam.org/docs/dce/manual/html/index.html
+,Pythia: yet another active probing technique for alias resolution,10.1145/2535372.2535413,Paper,Design,No script,Response,Partial,Public,No available,Need some additional work to clean script,,
+,An automated system for emulated network experimentation,10.1145/2535372.2535378,Paper,Design,Self contains,,,,,,,
+,Inferring multilateral peering,10.1145/2535372.2535390,Paper,Design,Partial,Send,,,,,,
+,Minimizing network complexity through integrated top-down design,10.1145/2535372.2535376,Paper,Design,Partial,Response,Irreproductible,Private,Private,,,
+,Understanding tradeoffs in incremental deployment of new network architectures,10.1145/2535372.2535396,Paper,Management ,Partial,Send,,,,,,
+,Low latency via redundancy,10.1145/2535372.2535392,Paper,Measurement,Partial,Response,,No need,Private,,Can give me a tar with code,
+,Socket intents: leveraging application awareness for multi-access connectivity,10.1145/2535372.2535405,Paper,Design,Partial,Send,,,,,,
+,Towards a SPDY'ier mobile web?,10.1145/2535372.2535399,Paper,Measurement,Partial,Response,,No need,Private,,Give some details in order to recreate the script,
+,Staying online while mobile: the hidden costs,10.1145/2535372.2535408,Paper,Measurement,Partial,Response,,Public,,,,http://rilanalyzer.smart-e.org/
+,Is there a case for mobile phone content pre-staging?,10.1145/2535372.2535414,Paper,Measurement,Partial,Response,,No need,Private,,Too related with data,
+,RFID shakables: pairing radio-frequency identification tags with the help of gesture recognition,10.1145/2535372.2535404,Paper,Design,Partial,Response,Irreproductible,Private,Private,,,
+,Resource thrifty secure mobile video transfers on open WiFi networks,10.1145/2535372.2535389,Paper,Design,Partial,Send,,,,,,
+,Enhancing video accessibility and availability using information-bound references,10.1145/2535372.2535393,Paper,Design,Self contains,,,,,,,
+,Shedding light on the structure of internet video quality problems in the wild,10.1145/2535372.2535394,Paper,Measurement,Partial,Send,,,,,,
+,Geography matters: building an efficient transport network for a better video conferencing experience,10.1145/2535372.2535395,Paper,Design,Partial,Send,,,,,,
+,DOMINO: relative scheduling in enterprise wireless LANs,10.1145/2535372.2535401,Paper,Design/Implementation,Partial,Send,,,,,,
+,On the benefits of applying experimental design to improve multipath TCP,10.1145/2535372.2535403,Paper,Measurement,Complet,,Complet,No need,Public,,,http://multipath-tcp.org/conext2013
+,DomainFlow: practical flow management method using multiple flow tables in commodity switches,10.1145/2535372.2535406,Paper,Design,Partial,Response,Irreproductible,Private,Private,,,
+,RiskRoute: a framework for mitigating network outage threats,10.1145/2535372.2535385,Paper,Design,Partial,Wait,,,,,,http://pages.cs.wisc.edu/~pb/software_data.html
+,CoDef: collaborative defense against large-scale link-flooding attacks,10.1145/2535372.2535398,Paper,Design,Partial,Send,,,,,,
+,Federated flow-based approach for privacy preserving connectivity tracking,10.1145/2535372.2535388,Paper,Measurement,Partial,Send,,No need,,,,

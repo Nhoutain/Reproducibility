@@ -30,6 +30,16 @@ RESPONSE = "Response"
 SELF = "Self contains"
 HARD = "Hardware"
 COMPLET = "Complet"
+WORK = "Work"
+PRIVATE = "Private"
+PUBLIC = "Public"
+NONEED = "No need"
+TGZ = "mail"
+WEB = "web"
+GIT = "Github"
+BIT = "Bitbucket"
+
+
 
 PAPER = "Paper"
 POSTER = "Poster"
@@ -99,12 +109,11 @@ def count(fct, l) :
 # |  __/| | (_) | |_ 
 # |_|   |_|\___/ \__|
                    
-def camenbert(i, sizes, labels, dpi, save) :
+def camenbert(i, sizes, labels, colors, explode, dpi, save) :
     fig = figure(i,figsize=(8,5))
     ax = fig.add_subplot(111, autoscale_on=False, xlim=(-1,5), ylim=(-4,3))
 
-    colors = ['red', 'yellowgreen', 'gold', 'lightskyblue','lightcoral']
-    explode = (0.1, 0.1, 0.1, 0.1, 0.1) 
+
     plt.pie(sizes, explode=explode, labels=labels, colors=colors,
             autopct='%1.1f %% ', shadow=True, startangle=90)
 
@@ -168,23 +177,13 @@ reading("../Analysis.csv")
 
 # Papers by conference and remove hardware
 base = map(lambda x: (filter(lambda y: x in y.infos[CONF] and
-                   not HARD in y.infos[PINFO] , papers), x), conferences)
+                   not HARD in y.infos[PINFO] and
+                   PAPER in y.infos[TYPE], papers), x), conferences)
+
 base.insert(0,(papers, "Global"))
 
 # Generated piechart 
 i=0
-for (ps, n) in base :
-    nSend     = count(lambda p: SEND in p.infos[MAIL], ps)
-    nResponse = count(lambda p: RESPONSE in p.infos[MAIL], ps)
-    nComplet  = count(lambda p: COMPLET in p.infos[PINFO], ps)
-    nSelf     = count(lambda p: SELF in p.infos[PINFO], ps)
-    nHardware = count(lambda p: HARD in p.infos[PINFO], ps)
-    nMail     = len(ps)
-
-    camenbert(i,[nSend, nResponse, nComplet, nSelf, nHardware],
-                ['No reply', 'Response', 'Complet', 'Self', 'Hardware'] , 1000, "piechart_mail/piechart_mail-{}.png".format(n))
-    i+=1
-
 
 nSend     = []
 nResponse = []
@@ -192,6 +191,13 @@ nComplet  = []
 nSelf     = []
 nMail     = []
 names     = []
+nWork     = []
+nNComplet = []
+nPrivate  = []
+nScript  = []
+nTgz  = []
+nWeb  = []
+nGit  = []
 
 for (ps, n) in base :
     nMail = len(ps) 
@@ -201,12 +207,47 @@ for (ps, n) in base :
     nSelf    .append( (100.0/nMail)*count(lambda p: SELF in p.infos[PINFO], ps) )
     names    .append(n)
 
+    nWork    .append( (100.0/nMail)*count(lambda p: WORK in p.infos[FINFO], ps))
+    nNComplet.append( (100.0/nMail)*count(lambda p: RESPONSE in p.infos[MAIL] and 
+                                                COMPLET in p.infos[FINFO], ps))
+
+    nPrivate .append( (100.0/nMail)*count(lambda p: PRIVATE in p.infos[CODE], ps))
+    nScript  .append( (100.0/nMail)*count(lambda p: (PUBLIC in p.infos[CODE] or 
+                                                    NONEED in p.infos[CODE]) and not PUBLIC in p.infos[SCRIPT], ps))
+
+    nTgz     .append( (100.0/nMail)*count(lambda p: TGZ in p.infos[SHARE], ps))
+    nWeb     .append( (100.0/nMail)*count(lambda p: WEB in p.infos[SHARE], ps))
+    nGit     .append( (100.0/nMail)*count(lambda p: GIT in p.infos[SHARE] or 
+                                                    BIT in p.infos[SHARE], ps))
+
+
+
+    camenbert(i,[nSend[-1], nResponse[-1], nComplet[-1], nSelf[-1]],
+                ['No reply', 'Response', 'Complet', 'Self'],
+                ['yellowgreen', 'gold', 'lightskyblue','lightcoral'],
+                [0.1, 0.1, 0.1, 0.1], 1000, "piechart_mail/piechart_mail-{}.png".format(names[-1]))
+    i+=1
+
+    camenbert(i,[nTgz[-1], nWeb[-1], nGit[-1]],
+                ['.tgz by mail', 'On website', 'On github/bitbucket'],
+                ['lightcoral', 'lightskyblue', 'yellowgreen'],
+                [0.0, 0.0, 0.0], 1000, "piechart_mail/piechart_mail2-{}.png".format(names[-1]))
+
+    i+=1
+
 
 bars(i,[[nComplet, nSelf], [nSend, nResponse]],
             [['gold', 'lightskyblue'], ['lightcoral', 'yellowgreen']],
-            [['Complet', 'Self contains', 'Hardware'], ['Wait response', 'Response']],
+            [['Complet', 'Self contains'], ['No response', 'Response']],
             names, "Result of Analysis.csv", 'bar_mail/bar_mail-all.png')
-                #['No reply', 'Response', 'Complet', 'Self', 'Hardware'] , 1000, "piechart_mail/piechart_mail-{}.png".format(n))
+
+i+=1
+
+bars(i,[[nNComplet, nWork,  map(lambda (x,y): x+y, zip(nComplet,nSelf))], [nPrivate, nScript, nSend]],
+            [['yellowgreen', 'lightskyblue', 'lightgray'], ['lightcoral', 'gold', 'darkgray']],
+            [['Complet with response', 'Work in progress', 'Self contained'], ['Privacy', 'No script', 'No response']],
+            names, "Result of Analysis.csv", 'bar_mail/bar_mail2-all.png')
+ 
 
 i+=1
 
