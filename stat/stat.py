@@ -117,7 +117,7 @@ def camenbert(i, sizes, labels, dpi, save) :
 
 def bars(i, sizes, colors, legendes, names, title, save): 
 
-    fig = figure(i,figsize=(8,8)
+    fig = figure(i,figsize=(8,8))
     ax = fig.add_subplot(111, autoscale_on=False, xlim=(-0.65,7), ylim=(0,4))
 
     N = len(sizes[0][0])
