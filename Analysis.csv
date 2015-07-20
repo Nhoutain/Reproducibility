@@ -286,12 +286,12 @@ CoNEXT-2014,Analyzing and Boosting the Performance of Power-Line Communication N
 ,"Tango: Simplifying SDN Control with Automatic Switch Property Inference, Abstraction and optimization",10.1145/2674005.2675011,Paper,Implementation,Partial,Send,,,,,,
 ,Merlin: A Language for Provisioning Network Resources,10.1145/2674005.2674989,Paper,Implementation,Partial,Response,Partial,Public,Partial,Github,,https://github.com/merlin-lang/merlin
 ,Controller-agnostic SDN Debugging,10.1145/2674005.2674993,Paper,Implementation,Partial,Response,Work in progress,Private,Private,,Look forward to making it open source,
-,On the Fairness-Efficiency Tradeoff for Packet Processing with Multiple Resources,10.1145/2674005.2675010,Paper,Design,Partial,Send,,,,,,
+,On the Fairness-Efficiency Tradeoff for Packet Processing with Multiple Resources,10.1145/2674005.2675010,Paper,Design,Partial,Respone,Partial,Mail share,Mail share,.tgz by mail,,
 ,NetAgg: Using Middleboxes for Application-specific On-path Aggregation in Data Centres,10.1145/2674005.2674996,Paper,Design,Partial,Send,,,,,,
 ,MSPlayer: Multi-Source and multi-Path LeverAged YoutubER,10.1145/2674005.2675007,Paper,Design,Partial,Send,,,,,,
 ,Deep Packet Inspection as a Service,10.1145/2674005.2674984,Paper,Design,Partial,Send,,,,,,
 ,Subsidization Competition: Vitalizing the Neutral Internet,10.1145/2674005.2674987,Paper,Design,Self contains,,,,,,,
-,Pricing The Last Mile: Data Capping For Residential Broadband,10.1145/2674005.2675008,Paper,Design,Partial,Send,,,,,,
+,Pricing The Last Mile: Data Capping For Residential Broadband,10.1145/2674005.2675008,Paper,Design,Partial,Response,Irreproductible,No need,Private,,,
 ,Collaborative Consumption for Mobile Broadband: A Quantitative Study,10.1145/2674005.2674997,Paper,Study,Self contains,,,,,,,
 ,User Behavior and Change: File-sharers and Copyright Laws,10.1145/2674005.2675009,Paper,Measurement,Partial,Send,,,,,,
 ,PARCEL: Proxy Assisted BRowsing in Cellular networks for Energy and Latency reduction,10.1145/2674005.2675004,Paper,Design,Partial,Send,,,,,,
@@ -307,7 +307,7 @@ CoNEXT-2013,Crowd-assisted search for price discrimination in e-commerce: first 
 ,A first look at IPv4 transfer markets,10.1145/2535372.2535416,Paper,Study,Self contains,,,,,,,
 ,"Optimizing the ""one big switch"" abstraction in software-defined networks",10.1145/2535372.2535373,Paper,Implementation,Partial,Response,Partial,Public,No available,,,http://www.cs.princeton.edu/~nkang/research/
 ,An adaptive flow counting method for anomaly detection in SDN,10.1145/2535372.2535411,Paper,Design,Partial,Send,,,,,,
-,Virtualizing the access network via open APIs,10.1145/2535372.2535381,Paper,Design,Partial,Send,,,,,,
+,Virtualizing the access network via open APIs,10.1145/2535372.2535381,Paper,Design,Partial,Response,,,,,,ftp://ftp.csiro.au/JohnMatthews/virtualizingAccessNetworkViaOpenAPIs.tgz
 ,Distributed resource control using shadowed subgraphs,10.1145/2535372.2535410,Paper,Design,Self contains,,,,,,,
 ,"Per-packet load-balanced,  low-latency routing for clos-based data center networks",10.1145/2535372.2535375,Paper,Design/Implementation,Partial,Response,Partial,Private,Private,,Can give me a read access on his bitbucket,
 ,Scaling IP multicast on datacenter topologies,10.1145/2535372.2535380,Paper,Design,Partial,Response,Irreproductible,Private,Not documented,,,
@@ -332,7 +332,7 @@ CoNEXT-2013,Crowd-assisted search for price discrimination in e-commerce: first 
 ,Minimizing network complexity through integrated top-down design,10.1145/2535372.2535376,Paper,Design,Partial,Response,Irreproductible,Private,Private,,,
 ,Understanding tradeoffs in incremental deployment of new network architectures,10.1145/2535372.2535396,Paper,Management ,Partial,Send,,,,,,
 ,Low latency via redundancy,10.1145/2535372.2535392,Paper,Measurement,Partial,Response,,No need,Private,,Can give me a tar with code,
-,Socket intents: leveraging application awareness for multi-access connectivity,10.1145/2535372.2535405,Paper,Design,Partial,Send,,,,,,
+,Socket intents: leveraging application awareness for multi-access connectivity,10.1145/2535372.2535405,Paper,Design,Partial,Response,,Public,Private,,Can share the script,https://github.com/fg-inet/socket-intents
 ,Towards a SPDY'ier mobile web?,10.1145/2535372.2535399,Paper,Measurement,Partial,Response,,No need,Private,,Give some details in order to recreate the script,
 ,Staying online while mobile: the hidden costs,10.1145/2535372.2535408,Paper,Measurement,Partial,Response,,Public,,,,http://rilanalyzer.smart-e.org/
 ,Is there a case for mobile phone content pre-staging?,10.1145/2535372.2535414,Paper,Measurement,Partial,Response,,No need,Private,,Too related with data,
@@ -346,4 +346,4 @@ CoNEXT-2013,Crowd-assisted search for price discrimination in e-commerce: first 
 ,DomainFlow: practical flow management method using multiple flow tables in commodity switches,10.1145/2535372.2535406,Paper,Design,Partial,Response,Irreproductible,Private,Private,,,
 ,RiskRoute: a framework for mitigating network outage threats,10.1145/2535372.2535385,Paper,Design,Partial,Wait,,,,,,http://pages.cs.wisc.edu/~pb/software_data.html
 ,CoDef: collaborative defense against large-scale link-flooding attacks,10.1145/2535372.2535398,Paper,Design,Partial,Send,,,,,,
-,Federated flow-based approach for privacy preserving connectivity tracking,10.1145/2535372.2535388,Paper,Measurement,Partial,Send,,No need,,,,
+,Federated flow-based approach for privacy preserving connectivity tracking,10.1145/2535372.2535388,Paper,Measurement,Partial,Response,Irreproductible,No need,No available,,,

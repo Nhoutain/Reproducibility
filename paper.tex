@@ -2,6 +2,7 @@
 
 
 \usepackage{tkz-orm}
+\usepackage{hyperref}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -64,6 +65,10 @@
 
 \lstset{language={C}}
 
+\hypersetup{
+    pdfborder={0 0 0}
+}
+
 \begin{document}
 
 % Table of contents depth
@@ -81,6 +86,24 @@ aaa
 \end{abstract}
 
 
+\newcommand{\urlqjump}{http://www.cl.cam.ac.uk/netos/qjump/nsdi2015}
+\newcommand{\urlqj}[1]{\urlqjump/#1.html}
+\newcommand{\hrefqj}[3][black]{\href{\urlqj{#2}}{\color{#1}{#3}}}%
+
+
+\begin{figure}[t]
+ \centering
+ \hrefqj{figure5}{\includegraphics[width=0.9\columnwidth]{stat/bar_mail/bar_mail-all.png}}
+ \caption{caption}
+ \label{f:eval-multi-app}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \href{http://nhoutain.github.io/Reproducibility/}{\includegraphics[width=5cm]{stat/bar_mail/bar_mail-all.png}}
+    \caption{oo}
+\end{figure}
 
 
 
@@ -94,6 +117,7 @@ Verifiable auctions for online ad exchanges
 How to improve your network performance by asking your provider for worse service
 TCP ex machina: computer-generated congestion control
 Direct code execution: revisiting library OS architecture for reproducible network experiments
+
 
 
 
