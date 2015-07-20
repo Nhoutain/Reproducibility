@@ -172,7 +172,14 @@ def bars(i, sizes, colors, legendes, names, title, save):
                     
 
 
-reading("../Analysis.csv")
+if( len(sys.argv[1]) < 3 ) :
+    print 'Need CSV file path and STAT directory in argument'
+    sys.exit(0)
+
+CSV_FILE = sys.argv[1]
+STAT_DIR = sys.argv[2]
+
+reading(CSV_FILE)
 
 
 # Papers by conference and remove hardware
@@ -225,13 +232,15 @@ for (ps, n) in base :
     camenbert(i,[nSend[-1], nResponse[-1], nComplet[-1], nSelf[-1]],
                 ['No reply', 'Response', 'Complet', 'Self'],
                 ['yellowgreen', 'gold', 'lightskyblue','lightcoral'],
-                [0.1, 0.1, 0.1, 0.1], 1000, "piechart_mail/piechart_mail-{}.png".format(names[-1]))
+                [0.1, 0.1, 0.1, 0.1], 1000, "{}/piechart_mail/piechart_mail-{}.png"
+                                                .format(STAT_DIR, names[-1]))
     i+=1
 
     camenbert(i,[nTgz[-1], nWeb[-1], nGit[-1]],
                 ['.tgz by mail', 'On website', 'On github/bitbucket'],
                 ['lightcoral', 'lightskyblue', 'yellowgreen'],
-                [0.0, 0.0, 0.0], 1000, "piechart_mail/piechart_mail2-{}.png".format(names[-1]))
+                [0.0, 0.0, 0.0], 1000, "{}/piechart_mail/piechart_mail2-{}.png"
+                                                .format(STAT_DIR, names[-1]))
 
     i+=1
 
@@ -239,18 +248,17 @@ for (ps, n) in base :
 bars(i,[[nComplet, nSelf], [nSend, nResponse]],
             [['gold', 'lightskyblue'], ['lightcoral', 'yellowgreen']],
             [['Complet', 'Self contains'], ['No response', 'Response']],
-            names, "Result of Analysis.csv", 'bar_mail/bar_mail-all.png')
+            names, "Result of Analysis.csv", "{}/bar_mail/bar_mail-all.png".format(STAT_DIR))
 
 i+=1
 
 bars(i,[[nNComplet, nWork,  map(lambda (x,y): x+y, zip(nComplet,nSelf))], [nPrivate, nScript, nSend]],
             [['yellowgreen', 'lightskyblue', 'lightgray'], ['lightcoral', 'gold', 'darkgray']],
             [['Complet with response', 'Work in progress', 'Self contained'], ['Privacy', 'No script', 'No response']],
-            names, "Result of Analysis.csv", 'bar_mail/bar_mail2-all.png')
+            names, "Result of Analysis.csv", "{}/bar_mail/bar_mail2-all.png"
+                                                .format(STAT_DIR))
  
 
 i+=1
-
-#bars(1, [[20, 35, 30, 35, 27], [25, 32, 34, 20, 25], [31, 37, 2, 26, 20]], ['y', 'r', 'g'])
 
 
