@@ -75,7 +75,8 @@
 
 \title{Reproducibility}
 
-\author{Bonaventure Olivier \and Houtain Nicolas}
+\author{\begin{tabular}{c}Bonaventure Olivier\\ olivier.bonaventure@uclouvain.be \end{tabular} 
+\and \begin{tabular}{c}Houtain Nicolas \\ nicolas.houtain@student.uclouvain.be \end{tabular} }
 \date{\date}
 
 \maketitle
@@ -89,13 +90,63 @@
 
 \section{Result}
 
-\begin{figure}[t]
+\begin{figure*}[!t]
     \centering
+    \begin{tabular}{p{0.9\columnwidth}p{0.9\columnwidth}}
     \href{http://nhoutain.github.io/Reproducibility/}
-        {\includegraphics[width=0.9\columnwidth]{stat/bar_mail/bar_mail-all.png}}
-    \caption{Bar mail}
+        {\includegraphics[width=0.9\columnwidth]{stat/bar_mail/bar_mail-all.png}} &
+
+    \href{http://nhoutain.github.io/Reproducibility/}
+        {\includegraphics[width=0.9\columnwidth]{stat/bar_mail/bar_mail2-all.png}} \\
+
+    (a) The first column represents the proportion of paper which contains all informations
+    in order to reproduce the paper, the second column is the proportion of paper where we
+    have send a mail. & (b) The column represents respectively the part of complet paper (with and without send
+    a mail) and not complet paper. \\
+\end{tabular}
+
+    \caption{Result about the proportions of mail send, reason, response and at the end paper complet or not.}
      \label{f:bar_mail}
-\end{figure}
+\end{figure*}
+
+\begin{figure*}[!t]
+    \centering
+    \begin{tabular}{m{0.8\columnwidth}m{0.4\columnwidth}m{0.4\columnwidth}m{0.4\columnwidth}}
+            \multirow{4}{*}{ 
+    \href{http://nhoutain.github.io/Reproducibility/} {
+        \includegraphics[width=0.8\columnwidth]{stat/piechart_mail/piechart_mail2-Global.png}}  }  &
+
+    \href{http://nhoutain.github.io/Reproducibility/}
+            {\includegraphics[width=0.4\columnwidth]{stat/piechart_mail/piechart_mail2-Hotnets-2013.png}} &
+
+    \href{http://nhoutain.github.io/Reproducibility/}
+            {\includegraphics[width=0.4\columnwidth]{stat/piechart_mail/piechart_mail2-SIGCOMM-2013.png}} &
+
+    \href{http://nhoutain.github.io/Reproducibility/}
+            {\includegraphics[width=0.4\columnwidth]{stat/piechart_mail/piechart_mail2-CoNEXT-2013.png}} \\
+
+            & (b) Hotnets-2013 & (c) SIGCOMM-2013 & (d) coNEXT-2013 \\
+
+            & 
+    \href{http://nhoutain.github.io/Reproducibility/}
+            {\includegraphics[width=0.4\columnwidth]{stat/piechart_mail/piechart_mail2-Hotnets-2014.png}} &
+
+    \href{http://nhoutain.github.io/Reproducibility/}
+            {\includegraphics[width=0.4\columnwidth]{stat/piechart_mail/piechart_mail2-SIGCOMM-2014.png}} &
+
+    \href{http://nhoutain.github.io/Reproducibility/}
+            {\includegraphics[width=0.4\columnwidth]{stat/piechart_mail/piechart_mail2-CoNEXT-2014.png}} \\
+            & (e) Hotnets-2014 & (f) SIGCOMM-2014 & (g) coNEXT-2014 \\
+
+            (a) Global  \\
+            
+        \end{tabular}
+        
+    \caption{How the information about reproducibility is shared.}
+     \label{f:bar_mail}
+\end{figure*}
+
+
 
 
 

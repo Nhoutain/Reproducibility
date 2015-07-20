@@ -109,16 +109,19 @@ def count(fct, l) :
 # |  __/| | (_) | |_ 
 # |_|   |_|\___/ \__|
                    
-def camenbert(i, sizes, labels, colors, explode, dpi, save) :
+def camenbert(i, sizes, labels, colors, explode, dpi, save, isLegend) :
     fig = figure(i,figsize=(8,5))
     ax = fig.add_subplot(111, autoscale_on=False, xlim=(-1,5), ylim=(-4,3))
 
 
-    plt.pie(sizes, explode=explode, labels=labels, colors=colors,
-            autopct='%1.1f %% ', shadow=True, startangle=90)
+    patches, texts = plt.pie(sizes, explode=explode, colors=colors,
+            shadow=True, startangle=90)
 
     # Set aspect ratio to be equal so that pie is drawn as a circle.
     plt.axis('equal')
+
+    if isLegend :
+        plt.legend(patches, labels, loc='best')
 
     savefig(save)
 
@@ -233,14 +236,14 @@ for (ps, n) in base :
                 ['No reply', 'Response', 'Complet', 'Self'],
                 ['yellowgreen', 'gold', 'lightskyblue','lightcoral'],
                 [0.1, 0.1, 0.1, 0.1], 1000, "{}/piechart_mail/piechart_mail-{}.png"
-                                                .format(STAT_DIR, names[-1]))
+                                                .format(STAT_DIR, names[-1]), names[-1] == 'Global')
     i+=1
 
     camenbert(i,[nTgz[-1], nWeb[-1], nGit[-1]],
                 ['.tgz by mail', 'On website', 'On github/bitbucket'],
                 ['lightcoral', 'lightskyblue', 'yellowgreen'],
                 [0.0, 0.0, 0.0], 1000, "{}/piechart_mail/piechart_mail2-{}.png"
-                                                .format(STAT_DIR, names[-1]))
+                                                .format(STAT_DIR, names[-1]), names[-1] == 'Global')
 
     i+=1
 

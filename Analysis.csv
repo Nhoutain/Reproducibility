@@ -58,7 +58,7 @@ Hotnets-2013,Corybantic: towards the modular composition of SDN control programs
 ,Managing the network with Merlin,10.1145/2535771.2535792,Paper,,,???,,,,,Where is Merlinﾠ?,
 ,How to improve your network performance by asking your provider for worse service,10.1145/2535771.2535775,Paper,Implementation,Partial,Response,Complet,Public,Public,Github,Really nice website step by step,http://netsys.github.io/RC3/
 ,,,,,,,,,,,,https://github.com/NetSys/rc3-linux
-,Plinko: building provably resilient forwarding tables,10.1145/2535771.2535774,Paper,Design,Partial,Send,,,,,,
+,Plinko: building provably resilient forwarding tables,10.1145/2535771.2535774,Paper,Design,Partial,Resoinse,Work in progress,No available,No available,,Fuller conference paper in submission,
 ,,,,,,,,,,,,
 SIGCOMM-2014,Millions of little minions: using packets for low latency network programming and visibility,10.1145/2619239.2626292,Paper,Implementation,Partial,Response,Complet,Public,Public,Github,Nice repository with instruction,https://bitbucket.org/jvimal/tpp-ovs
 ,,,,,,,,,,,,https://bitbucket.org/jvimal/tpp-ovs/src/master/plot_scripts/ 
@@ -328,7 +328,7 @@ CoNEXT-2013,Crowd-assisted search for price discrimination in e-commerce: first 
 ,Direct code execution: revisiting library OS architecture for reproducible network experiments,10.1145/2535372.2535374,Paper,Measurement,Complet,,Complet,Public,Public,,,https://www.nsnam.org/docs/dce/manual/html/index.html
 ,Pythia: yet another active probing technique for alias resolution,10.1145/2535372.2535413,Paper,Design,No script,Response,Partial,Public,No available,Need some additional work to clean script,,
 ,An automated system for emulated network experimentation,10.1145/2535372.2535378,Paper,Design,Self contains,,,,,,,
-,Inferring multilateral peering,10.1145/2535372.2535390,Paper,Design,Partial,Send,,,,,,
+,Inferring multilateral peering,10.1145/2535372.2535390,Paper,Design,Partial,Wait,,,,,,
 ,Minimizing network complexity through integrated top-down design,10.1145/2535372.2535376,Paper,Design,Partial,Response,Irreproductible,Private,Private,,,
 ,Understanding tradeoffs in incremental deployment of new network architectures,10.1145/2535372.2535396,Paper,Management ,Partial,Send,,,,,,
 ,Low latency via redundancy,10.1145/2535372.2535392,Paper,Measurement,Partial,Response,,No need,Private,,Can give me a tar with code,
