@@ -25,6 +25,7 @@ SHARE  = 10
 COM    = 11
 LINK   = 12
 
+
 SEND = "Send"
 RESPONSE = "Response"
 SELF = "Self contains"
@@ -34,12 +35,8 @@ WORK = "Work"
 PRIVATE = "Private"
 PUBLIC = "Public"
 NONEED = "No need"
-TGZ = "mail"
-WEB = "web"
-GIT = "Github"
-BIT = "Bitbucket"
-
-
+WAIT = "Wait"
+UNAVAI = "No available"
 
 PAPER = "Paper"
 POSTER = "Poster"
@@ -153,17 +150,16 @@ def bars(i, sizes, colors, legendes, names, title, save):
     plt.title(title)
 
     plt.xticks(ind+width/2., names, rotation='vertical' )
-    plt.margins(0.3)
+    plt.margins(0.5)
     # Tweak spacing to prevent clipping of tick-labels
-    plt.subplots_adjust(bottom=0.25)
+    plt.subplots_adjust(bottom=0.28)
 
-    plt.yticks(np.arange(0,101,10))
+    plt.yticks(np.arange(0,111,10))
 
-    plt.legend(loc=2)
+    plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.28),
+                      fancybox=True, shadow=True, ncol=2)
 
     savefig(save)
-
-
 
 
 
@@ -195,73 +191,64 @@ base.insert(0,(papers, "Global"))
 # Generated piechart 
 i=0
 
-nSend     = []
-nResponse = []
-nComplet  = []
-nSelf     = []
-nMail     = []
-names     = []
-nWork     = []
-nNComplet = []
-nPrivate  = []
-nScript  = []
-nTgz  = []
-nWeb  = []
-nGit  = []
+nPaper      = []
+nReferenced = []
+nNoSoftware = []
+nNoReply    = []
+nReply      = []
+
+nGiveRef    = []
+nWork       = []
+nPrivate    = []
+
+names       = []
+
 
 for (ps, n) in base :
-    nMail = len(ps) 
-    nSend    .append( (100.0/nMail)*count(lambda p: SEND in p.infos[MAIL], ps) )
-    nResponse.append( (100.0/nMail)*count(lambda p: RESPONSE in p.infos[MAIL], ps) )
-    nComplet .append( (100.0/nMail)*count(lambda p: COMPLET in p.infos[PINFO], ps) )
-    nSelf    .append( (100.0/nMail)*count(lambda p: SELF in p.infos[PINFO], ps) )
-    names    .append(n)
+    nPaper.append(len(ps))
+    nPaperReply = count(lambda p: RESPONSE in p.infos[MAIL], ps) 
 
-    nWork    .append( (100.0/nMail)*count(lambda p: WORK in p.infos[FINFO], ps))
-    nNComplet.append( (100.0/nMail)*count(lambda p: RESPONSE in p.infos[MAIL] and 
-                                                COMPLET in p.infos[FINFO], ps))
-
-    nPrivate .append( (100.0/nMail)*count(lambda p: PRIVATE in p.infos[CODE], ps))
-    nScript  .append( (100.0/nMail)*count(lambda p: (PUBLIC in p.infos[CODE] or 
-                                                    NONEED in p.infos[CODE]) and not PUBLIC in p.infos[SCRIPT], ps))
-
-    nTgz     .append( (100.0/nMail)*count(lambda p: TGZ in p.infos[SHARE], ps))
-    nWeb     .append( (100.0/nMail)*count(lambda p: WEB in p.infos[SHARE], ps))
-    nGit     .append( (100.0/nMail)*count(lambda p: GIT in p.infos[SHARE] or 
-                                                    BIT in p.infos[SHARE], ps))
+    # First graph
+    nReferenced.append((100.0/nPaper[-1])*count(lambda p: COMPLET in p.infos[PINFO], ps) )
+    nNoSoftware.append((100.0/nPaper[-1])*count(lambda p: SELF in p.infos[PINFO] or 
+                             HARD in p.infos[PINFO], ps) )
+    nReply     .append((100.0/nPaper[-1])*count(lambda p: RESPONSE in p.infos[MAIL], ps) )
+    nNoReply   .append((100.0/nPaper[-1])*count(lambda p: SEND in p.infos[MAIL] or
+                                     WAIT in p.infos[MAIL], ps) )
 
 
+    # Second graph
+    nGiveRef   .append((100.0/nPaperReply)*count(lambda p: COMPLET in p.infos[FINFO] and
+                                                    RESPONSE in p.infos[MAIL], ps) )
+    nWork      .append((100.0/nPaperReply)*count(lambda p: WORK in p.infos[FINFO], ps) )
+    nPrivate   .append((100.0/nPaperReply)*count(lambda p: WORK not in p.infos[FINFO] and 
+                                (   PRIVATE in p.infos[CODE] or
+                                     UNAVAI in p.infos[CODE] or
+                                     PRIVATE in p.infos[SCRIPT] or
+                                     UNAVAI in p.infos[SCRIPT] ) , ps) )
 
-    camenbert(i,[nSend[-1], nResponse[-1], nComplet[-1], nSelf[-1]],
-                ['No reply', 'Response', 'Complet', 'Self'],
-                ['yellowgreen', 'gold', 'lightskyblue','lightcoral'],
-                [0.1, 0.1, 0.1, 0.1], 1000, "{}/piechart_mail/piechart_mail-{}.png"
-                                                .format(STAT_DIR, names[-1]), names[-1] == 'Global')
-    i+=1
-
-    camenbert(i,[nTgz[-1], nWeb[-1], nGit[-1]],
-                ['.tgz by mail', 'On website', 'On github/bitbucket'],
-                ['lightcoral', 'lightskyblue', 'yellowgreen'],
-                [0.0, 0.0, 0.0], 1000, "{}/piechart_mail/piechart_mail2-{}.png"
-                                                .format(STAT_DIR, names[-1]), names[-1] == 'Global')
-
-    i+=1
+    names.append(n)
 
 
-bars(i,[[nComplet, nSelf], [nSend, nResponse]],
-            [['gold', 'lightskyblue'], ['lightcoral', 'yellowgreen']],
-            [['Complet', 'Self contains'], ['No response', 'Response']],
+print("{} = {} {} {} {}".format(nPaper, nReferenced, nNoSoftware, nReply, nNoReply))
+
+bars(i,[[nReferenced, nNoSoftware, nNoReply, nReply]],
+            [['gold', 'lightskyblue', 'lightcoral', 'yellowgreen']],
+            [['Software referenced in paper', 'No software required', 'Authors no reply', 'Authors reply']],
             names, "Result of Analysis.csv", "{}/bar_mail/bar_mail-all.png".format(STAT_DIR))
 
 i+=1
 
-bars(i,[[nNComplet, nWork,  map(lambda (x,y): x+y, zip(nComplet,nSelf))], [nPrivate, nScript, nSend]],
-            [['yellowgreen', 'lightskyblue', 'lightgray'], ['lightcoral', 'gold', 'darkgray']],
-            [['Complet with response', 'Work in progress', 'Self contained'], ['Privacy', 'No script', 'No response']],
+bars(i,[[nGiveRef, nWork, nPrivate]],
+            [['yellowgreen', 'lightskyblue', 'lightcoral']],
+            [['Give software reference', 'Work to make a public release', 'No software or script available']],
             names, "Result of Analysis.csv", "{}/bar_mail/bar_mail2-all.png"
                                                 .format(STAT_DIR))
- 
-
 i+=1
 
+bars(i,[[map(lambda (ref, noSoft, give, response): ref+noSoft+(give*response/100.), zip(nReferenced,nNoSoftware, nGiveRef, nReply))]],
+            [['yellowgreen']],
+            [['Reproductible paper at the end']],
+            names, "Result of Analysis.csv", "{}/bar_mail/bar_mail3-all.png"
+                                                .format(STAT_DIR))
 
