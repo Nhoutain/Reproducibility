@@ -40,6 +40,8 @@ UNAVAI = "No available"
 
 PAPER = "Paper"
 POSTER = "Poster"
+DEMO = "Demo"
+PAPER_TYPE = [PAPER, POSTER, DEMO]
 
 
 #   ____ _       _           _ 
@@ -57,6 +59,8 @@ conferences = []
 # |  __/ (_| | |_) |  __/ |   
 # |_|   \__,_| .__/ \___|_|   
 #            |_|              
+#
+# A paper contains informations add in .csv
 
 class Paper:
 
@@ -73,6 +77,7 @@ class Paper:
         return str(self.link)
 
 
+# Read .csv 
 def reading(path) :
     f = open(path, 'r')
 
@@ -85,7 +90,8 @@ def reading(path) :
 
         if parse[CONF]:
             conf = parse[CONF]
-            conferences.append(conf)
+            for i in PAPER_TYPE :
+                conferences.append((conf , i))
 
         if parse[TITLE]:
             paper = Paper(conf, parse)
@@ -122,12 +128,10 @@ def camenbert(i, sizes, labels, colors, explode, dpi, save, isLegend) :
 
     savefig(save)
 
-    #plt.show()
-
 def bars(i, sizes, colors, legendes, names, title, save): 
 
     fig = figure(i,figsize=(8,8))
-    ax = fig.add_subplot(111, autoscale_on=False, xlim=(-0.65,7), ylim=(0,4))
+    ax = fig.add_subplot(111, autoscale_on=False, xlim=(-0.65,len(names)), ylim=(0,4))
 
     N = len(sizes[0][0])
 
@@ -181,14 +185,21 @@ STAT_DIR = sys.argv[2]
 reading(CSV_FILE)
 
 
-# Papers by conference and remove hardware
-base = map(lambda x: (filter(lambda y: x in y.infos[CONF] and
-                   not HARD in y.infos[PINFO] and
-                   PAPER in y.infos[TYPE], papers), x), conferences)
+# Remove Hardware paper
+papers = filter( lambda x : not HARD in x.infos[PINFO], papers)
 
-base.insert(0,(papers, "Global"))
+# Sort paper by conference and paper type
+base = map(lambda (x, t): (filter(lambda y: x in y.infos[CONF] and
+                   t in y.infos[TYPE], papers), x), conferences)
 
-# Generated piechart 
+# Add Global for each paper type
+for i in reversed(PAPER_TYPE) :
+    base.insert(0,(filter(lambda x : i in x.infos[TYPE], papers), "Global"))
+
+# Remove empty
+base = filter( lambda (x, l) : len(x) != 0, base)
+
+
 i=0
 
 nPaper      = []
@@ -227,10 +238,8 @@ for (ps, n) in base :
                                      PRIVATE in p.infos[SCRIPT] or
                                      UNAVAI in p.infos[SCRIPT] ) , ps) )
 
-    names.append(n)
+    names.append("{} \n {}".format(n, ps[0].infos[TYPE]))
 
-
-print("{} = {} {} {} {}".format(nPaper, nReferenced, nNoSoftware, nReply, nNoReply))
 
 bars(i,[[nReferenced, nNoSoftware, nNoReply, nReply]],
             [['gold', 'lightskyblue', 'lightcoral', 'yellowgreen']],
@@ -241,7 +250,7 @@ i+=1
 
 bars(i,[[nGiveRef, nWork, nPrivate]],
             [['yellowgreen', 'lightskyblue', 'lightcoral']],
-            [['Give software reference', 'Work to make a public release', 'No software or no script available']],
+            [['Give software reference', 'Work to make public release', 'No software or no script available']],
             names, "Result of Analysis.csv", "{}/bar_mail/bar_mail2-all.png"
                                                 .format(STAT_DIR))
 i+=1
