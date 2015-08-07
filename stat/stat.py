@@ -241,7 +241,7 @@ i+=1
 
 bars(i,[[nGiveRef, nWork, nPrivate]],
             [['yellowgreen', 'lightskyblue', 'lightcoral']],
-            [['Give software reference', 'Work to make a public release', 'No software or script available']],
+            [['Give software reference', 'Work to make a public release', 'No software or no script available']],
             names, "Result of Analysis.csv", "{}/bar_mail/bar_mail2-all.png"
                                                 .format(STAT_DIR))
 i+=1
