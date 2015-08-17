@@ -202,6 +202,12 @@ def writer(sizes, legendes, pond, names, f_name):
 # |____/ \__\__,_|\__|
                     
 
+def counting(fct, li) :
+    cnt = count(fct, li)
+    tmp = filter(lambda x : not fct(x), li)
+    
+    return tmp,cnt
+
 
 if( len(sys.argv[1]) < 3 ) :
     print 'Need CSV file path and STAT directory in argument'
@@ -231,6 +237,7 @@ base = filter( lambda (x, l) : len(x) != 0, base)
 i=0
 
 nPaper      = []
+
 nReferenced = []
 nNoSoftware = []
 nNoReply    = []
@@ -238,32 +245,67 @@ nReply      = []
 
 nGiveRef    = []
 nWork       = []
+nPartial    = []
 nPrivate    = []
 
 names       = []
-graphNames       = []
+graphNames  = []
+
+log = open("stat/log", 'w')
 
 for (ps, n) in base :
     nPaper.append(len(ps))
 
     # First graph
-    nReferenced.append(count(lambda p: COMPLET in p.infos[PINFO], ps) )
-    nNoSoftware.append(count(lambda p: SELF in p.infos[PINFO] or 
-                             HARD in p.infos[PINFO], ps) )
-    nReply     .append(count(lambda p: RESPONSE in p.infos[MAIL], ps) )
-    nNoReply   .append(count(lambda p: SEND in p.infos[MAIL] or
-                                     WAIT in p.infos[MAIL], ps) )
-
+    tmp, cnt = counting(lambda p: COMPLET in p.infos[PINFO], ps)
+    nReferenced.append(cnt)
+    tmp, cnt = counting(lambda p: SELF in p.infos[PINFO] or 
+                             HARD in p.infos[PINFO], tmp)
+    nNoSoftware.append(cnt)
+    tmp, cnt = counting(lambda p: RESPONSE in p.infos[MAIL], tmp)
+    nReply     .append(cnt)
+    tmp, cnt = counting(lambda p: SEND in p.infos[MAIL] or
+                                     WAIT in p.infos[MAIL], tmp)
+    nNoReply   .append(cnt)
+    
+    log.write("Paper not classify in the first graph\n")
+    for test in tmp :
+        log.write("{}\n".format(test.infos[TITLE]))
 
     # Second graph
-    nGiveRef   .append(count(lambda p: COMPLET in p.infos[FINFO] and
-                                RESPONSE in p.infos[MAIL], ps) )
-    nWork      .append(count(lambda p: WORK in p.infos[FINFO], ps) )
-    nPrivate   .append(count(lambda p: WORK not in p.infos[FINFO] and 
-                                (   PRIVATE in p.infos[CODE] or
+    tmp = filter(lambda p: RESPONSE in p.infos[MAIL], ps)
+                            
+    tmp, cnt = counting(lambda p: COMPLET in p.infos[FINFO] and
+                                RESPONSE in p.infos[MAIL], tmp)
+    nGiveRef.append(cnt)
+    tmp, cnt = counting(lambda p: WORK in p.infos[FINFO], tmp)
+    nWork.append(cnt)
+    tmp, cnt = counting(lambda p: WORK not in p.infos[FINFO] and 
+                            (
+                                    PUBLIC not in p.infos[SCRIPT] and
+                                    NONEED not in p.infos[SCRIPT] and
+                                    PUBLIC in p.infos[CODE]  
+                                        or
+                                    PUBLIC not in p.infos[CODE] and
+                                    NONEED not in p.infos[CODE] and
+                                    PUBLIC in p.infos[SCRIPT] 
+                            ) , tmp ) 
+
+    nPartial.append(cnt)
+
+    tmp, cnt = counting(lambda p: WORK not in p.infos[FINFO] and 
+                                ( ( PRIVATE in p.infos[CODE] or
                                      UNAVAI in p.infos[CODE] or
+                                     NONEED in p.infos[CODE] ) and (
                                      PRIVATE in p.infos[SCRIPT] or
-                                     UNAVAI in p.infos[SCRIPT] ) , ps) )
+                                     UNAVAI in p.infos[SCRIPT] ) ) , tmp)
+    nPrivate.append(cnt)
+
+
+    log.write("\n\nPaper not classify in the second graph\n")
+    for test in tmp :
+        log.write("{}\n".format(test.infos[TITLE]))
+
 
     names.append("{} - {}".format(n, ps[0].infos[TYPE]))
     graphNames.append("{} \n {}".format(n, ps[0].infos[TYPE]))
@@ -281,10 +323,10 @@ writer(gSizes, gNames, gPond, names, "{}/global-result.csv".format(STAT_DIR))
 i+=1
 
 # Plot second
-gSizes  = [nGiveRef, nWork, nPrivate]
-gNames  = ['Give software reference', 'Work to make public release', 'No software or no script available']
+gSizes  = [nGiveRef, nWork, nPartial, nPrivate]
+gNames  = ['Give software reference', 'Work to make public release', 'Some reference', 'No reference given']
 gPond   = map(lambda x: 100.0/x, nReply)
-gColors = ['yellowgreen', 'lightskyblue', 'lightcoral']
+gColors = ['yellowgreen', 'lightskyblue', 'sandybrown', 'lightcoral']
 
 oneBars(i, gSizes, gPond, gColors, gNames, graphNames, "Result of Analysis.csv", 
                 "{}/mail-analysis.png".format(STAT_DIR))
@@ -302,3 +344,4 @@ oneBars(i, gSizes, gPond, gColors, gNames, graphNames, "Result of Analysis.csv",
                 "{}/final-analysis.png".format(STAT_DIR))
 writer(gSizes, gNames, gPond, names, "{}/final-result.csv".format(STAT_DIR))
 
+log.close()
