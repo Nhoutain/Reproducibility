@@ -128,7 +128,10 @@ def camenbert(i, sizes, labels, colors, explode, dpi, save, isLegend) :
 
     savefig(save)
 
-def bars(i, sizes, colors, legendes, names, title, save): 
+def oneBars(i, sizes, pond, colors, legendes, names, title, save):
+    bars(i, [sizes], pond, [colors], [legendes], names, title, save)
+
+def bars(i, sizes, pond, colors, legendes, names, title, save): 
 
     fig = figure(i,figsize=(8,8))
     ax = fig.add_subplot(111, autoscale_on=False, xlim=(-0.65,len(names)), ylim=(0,4))
@@ -144,10 +147,14 @@ def bars(i, sizes, colors, legendes, names, title, save):
     m=0
     for (side, col, legende) in zip(sizes, colors, legendes) :
         acc = map(lambda x: 0, sizes[0][0])
-        for (s,c, l) in zip(side, col, legende) :
-            plt.bar(ind+ m*width - padding , s, width, color=c, bottom=acc, label=l)
-            acc = map( lambda (x,y) : x+y, zip(acc, s))
+        for (s, c, l) in zip(side, col, legende) :
+            # Ajdust size with pond
+            tmp = map(lambda (x,y) : x*y, zip(s,pond))
+
+            plt.bar(ind+ m*width - padding , tmp , width, color=c, bottom=acc, label=l)
+            acc = map( lambda (x,y) : x+y, zip(acc, tmp))
         m += 1
+
 
 
     plt.ylabel('Pourcentage')
@@ -164,6 +171,27 @@ def bars(i, sizes, colors, legendes, names, title, save):
                       fancybox=True, shadow=True, ncol=2)
 
     savefig(save)
+
+def writer(sizes, legendes, pond, names, f_name):
+    f = open(f_name, 'w')
+    f.write("Conferences, Total")
+    map(lambda x: f.write(", {}".format(x)), legendes)
+    f.write("\n")
+
+    i = 0
+    for (c,p) in zip(names, pond) :
+        f.write("{}, {}, ".format(c,(1/p)*100))
+        for s in sizes :
+            f.write("{}, ".format(s[i]))
+
+        i+=1
+        f.write("\n")
+
+
+    f.write("\n")
+    f.close()
+    
+
 
 
 
@@ -186,7 +214,7 @@ reading(CSV_FILE)
 
 
 # Remove Hardware paper
-papers = filter( lambda x : not HARD in x.infos[PINFO], papers)
+# papers = filter( lambda x : not HARD in x.infos[PINFO], papers)
 
 # Sort paper by conference and paper type
 base = map(lambda (x, t): (filter(lambda y: x in y.infos[CONF] and
@@ -213,51 +241,64 @@ nWork       = []
 nPrivate    = []
 
 names       = []
-
+graphNames       = []
 
 for (ps, n) in base :
     nPaper.append(len(ps))
-    nPaperReply = count(lambda p: RESPONSE in p.infos[MAIL], ps) 
 
     # First graph
-    nReferenced.append((100.0/nPaper[-1])*count(lambda p: COMPLET in p.infos[PINFO], ps) )
-    nNoSoftware.append((100.0/nPaper[-1])*count(lambda p: SELF in p.infos[PINFO] or 
+    nReferenced.append(count(lambda p: COMPLET in p.infos[PINFO], ps) )
+    nNoSoftware.append(count(lambda p: SELF in p.infos[PINFO] or 
                              HARD in p.infos[PINFO], ps) )
-    nReply     .append((100.0/nPaper[-1])*count(lambda p: RESPONSE in p.infos[MAIL], ps) )
-    nNoReply   .append((100.0/nPaper[-1])*count(lambda p: SEND in p.infos[MAIL] or
+    nReply     .append(count(lambda p: RESPONSE in p.infos[MAIL], ps) )
+    nNoReply   .append(count(lambda p: SEND in p.infos[MAIL] or
                                      WAIT in p.infos[MAIL], ps) )
 
 
     # Second graph
-    nGiveRef   .append((100.0/nPaperReply)*count(lambda p: COMPLET in p.infos[FINFO] and
-                                                    RESPONSE in p.infos[MAIL], ps) )
-    nWork      .append((100.0/nPaperReply)*count(lambda p: WORK in p.infos[FINFO], ps) )
-    nPrivate   .append((100.0/nPaperReply)*count(lambda p: WORK not in p.infos[FINFO] and 
+    nGiveRef   .append(count(lambda p: COMPLET in p.infos[FINFO] and
+                                RESPONSE in p.infos[MAIL], ps) )
+    nWork      .append(count(lambda p: WORK in p.infos[FINFO], ps) )
+    nPrivate   .append(count(lambda p: WORK not in p.infos[FINFO] and 
                                 (   PRIVATE in p.infos[CODE] or
                                      UNAVAI in p.infos[CODE] or
                                      PRIVATE in p.infos[SCRIPT] or
                                      UNAVAI in p.infos[SCRIPT] ) , ps) )
 
-    names.append("{} \n {}".format(n, ps[0].infos[TYPE]))
+    names.append("{} - {}".format(n, ps[0].infos[TYPE]))
+    graphNames.append("{} \n {}".format(n, ps[0].infos[TYPE]))
 
 
-bars(i,[[nReferenced, nNoSoftware, nNoReply, nReply]],
-            [['gold', 'lightskyblue', 'lightcoral', 'yellowgreen']],
-            [['Software referenced in paper', 'No software required', 'Authors no reply', 'Authors reply']],
-            names, "Result of Analysis.csv", "{}/bar_mail/bar_mail-all.png".format(STAT_DIR))
+# Plot first
+gSizes  = [nReferenced, nNoSoftware, nNoReply, nReply]
+gNames  = ['Software referenced in paper', 'No software required', 'Authors no reply', 'Authors reply']
+gPond   = map(lambda x: 100.0/x, nPaper)
+gColors = ['gold', 'lightskyblue', 'lightcoral', 'yellowgreen']
 
+oneBars(i, gSizes, gPond, gColors, gNames, graphNames, "Result of Analysis.csv", 
+                "{}/global-analysis.png".format(STAT_DIR))
+writer(gSizes, gNames, gPond, names, "{}/global-result.csv".format(STAT_DIR))
 i+=1
 
-bars(i,[[nGiveRef, nWork, nPrivate]],
-            [['yellowgreen', 'lightskyblue', 'lightcoral']],
-            [['Give software reference', 'Work to make public release', 'No software or no script available']],
-            names, "Result of Analysis.csv", "{}/bar_mail/bar_mail2-all.png"
-                                                .format(STAT_DIR))
+# Plot second
+gSizes  = [nGiveRef, nWork, nPrivate]
+gNames  = ['Give software reference', 'Work to make public release', 'No software or no script available']
+gPond   = map(lambda x: 100.0/x, nReply)
+gColors = ['yellowgreen', 'lightskyblue', 'lightcoral']
+
+oneBars(i, gSizes, gPond, gColors, gNames, graphNames, "Result of Analysis.csv", 
+                "{}/mail-analysis.png".format(STAT_DIR))
+writer(gSizes, gNames, gPond, names, "{}/mail-result.csv".format(STAT_DIR))
 i+=1
 
-bars(i,[[map(lambda (ref, noSoft, give, response): ref+noSoft+(give*response/100.), zip(nReferenced,nNoSoftware, nGiveRef, nReply))]],
-            [['yellowgreen']],
-            [['Reproductible paper at the end']],
-            names, "Result of Analysis.csv", "{}/bar_mail/bar_mail3-all.png"
-                                                .format(STAT_DIR))
+# Plot third
+gSizes  = [map(lambda (ref, noSoft, give, response): ref+noSoft+give, 
+            zip(nReferenced, nNoSoftware, nGiveRef, nReply))]
+gNames  = ['Reproductible paper at the end']
+gPond   = map(lambda x: 100.0/x, nPaper)
+gColors = ['yellowgreen']
+
+oneBars(i, gSizes, gPond, gColors, gNames, graphNames, "Result of Analysis.csv", 
+                "{}/final-analysis.png".format(STAT_DIR))
+writer(gSizes, gNames, gPond, names, "{}/final-result.csv".format(STAT_DIR))
 
